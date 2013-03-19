@@ -54,6 +54,26 @@
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(82, 168, 236, 0.6);
 }
 
+.input-append .select2-container, .input-prepend .select2-container {
+  font-size:14px;
+}
+
+.input-prepend .select2-container > a.select2-choice,
+.input-prepend .select2-container-multi .select2-choices {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.input-append .select2-container > a, 
+.input-append .select2-container-multi .select2-choices {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.input-prepend .select2-container > a.select2-choice > div,
+.input-append .select2-container > a.select2-choice > div {
+  display:none;
+}
 
 /**
  * This stops the quick flash when a native selectbox is shown and 

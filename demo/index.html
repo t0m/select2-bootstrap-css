@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/select2.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
+    <link rel="stylesheet" type="text/css" href="../select2-bootstrap.css"/>
+  </head>
+  <body style="margin:20px;">
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label">Default textbox</label>
+        <div class="controls">
+          <input type="text" style="width:400px;"/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 single select</label>
+        <div class="controls">
+          <select class="select2" style="width:400px;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 multi select</label>
+        <div class="controls">
+          <select class="select2" multiple="multiple" style="width:400px;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 append</label>
+        <div class="controls">
+          <div class="input-append">
+            <select id="single-append" class="select2" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+            <button class="btn" type="button" data-select2-open="single-append">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 prepend</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <button class="btn" type="button" data-select2-open="single-prepend">
+              <i class="icon-search"></i>
+            </button>
+            <select id="single-prepend" class="select2" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 multi append</label>
+        <div class="controls">
+          <div class="input-append">
+            <select id="multi-append" class="select2" multiple="multiple" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+            <button class="btn" type="button" data-select2-open="multi-append">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 multi prepend</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <button class="btn" type="button" data-select2-open="multi-prepend">
+              <i class="icon-search"></i>
+            </button>
+            <select id="multi-prepend" class="select2" multiple="multiple" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      $('.select2').select2();
+      $('button[data-select2-open]').click(function(){
+        $('#' + $(this).data('select2-open')).select2('open');
+      });
+    </script>
+  </body>
+</html>

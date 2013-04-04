@@ -75,6 +75,11 @@
   display:none;
 }
 
+.input-append .select2-offscreen,
+.input-prepend .select2-offscreen {
+  position: absolute;
+}
+
 /**
  * This stops the quick flash when a native selectbox is shown and 
  * then replaced by a select2 input when javascript kicks in. This can be 

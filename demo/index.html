@@ -108,10 +108,28 @@
           </div>
         </div>
       </div>
+
+      <div class="control-group">
+        <label class="control-label">Select2 custom data load</label>
+        <div class="controls">
+          <div class="input-prepend input-append">
+            <button class="btn" type="button" data-select2-open="remote-load">
+              <i class="icon-search"></i>
+            </button>
+            <input id="remote-load" type="hidden" class="select2-remote" style="width:400px;">
+            <button class="btn" type="button" data-select2-open="remote-load">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </form>
 
     <script>
       $('.select2').select2();
+      
+      $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
+
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');
       });

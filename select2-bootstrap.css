@@ -60,14 +60,14 @@
 
 .input-prepend .select2-container > a.select2-choice,
 .input-prepend .select2-container-multi .select2-choices {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .input-append .select2-container > a, 
 .input-append .select2-container-multi .select2-choices {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .select2-dropdown-open .select2-choice,

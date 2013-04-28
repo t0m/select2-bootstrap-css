@@ -108,6 +108,7 @@
           </div>
         </div>
       </div>
+
       <div class="control-group">
         <label for="remote-load" class="control-label">Select2 custom data load</label>
         <div class="controls">
@@ -125,7 +126,10 @@
     </form>
 
     <script>
-      $('.select2').select2();
+      $('.select2').select2({ placeholder : '' });
+      
+      $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
+
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');
       });

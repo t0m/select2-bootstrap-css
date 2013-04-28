@@ -70,6 +70,18 @@
   border-bottom-right-radius: 0px;
 }
 
+.select2-dropdown-open .select2-choice,
+.select2-dropdown-open .select2-choices {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .input-prepend .select2-container > a.select2-choice > div,
 .input-append .select2-container > a.select2-choice > div {
   display:none;

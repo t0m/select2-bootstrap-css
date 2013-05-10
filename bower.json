@@ -1,0 +1,12 @@
+{
+  "name": "select2-bootstrap-css",
+  "version": "1.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "bootstrap": "~2.3.1"
+  }
+}

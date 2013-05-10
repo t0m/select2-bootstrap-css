@@ -1,14 +1,14 @@
-exports.compileLess = function(test){
+exports.compileScss = function(test){
   var grunt = require('grunt'),
       fs = require('fs'),
       jsdiff = require('diff'),
       t = test,
       filename = 'select2-bootstrap.css',
-      patchfile = 'test/support/less.patch',
+      patchfile = 'test/support/scss.patch',
       // This is writing to the actual docs folder, generally a no-no for tests to make changes!
       child = grunt.util.spawn({
-        cmd: 'lessc',
-        args: ['--verbose', 'lib/build.less', 'docs/'+filename]
+        cmd: 'grunt',
+        args: ['sass']
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile(filename),

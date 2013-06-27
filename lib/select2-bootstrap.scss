@@ -13,7 +13,7 @@
   &.input-large      { width: 210px; }
   &.input-xlarge     { width: 270px; }
   &.input-xxlarge    { width: 530px; }
-  [class*="span"] {
+  &[class*="span"] {
     float: none;
     margin-left: 0;
   }

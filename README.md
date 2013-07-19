@@ -9,8 +9,6 @@ Tests are included to verify that LESS and SCSS compile down to the target CSS. 
     npm install && bower install
     npm test
 
-![preview image](http://t0m.github.com/select2-bootstrap-css/select2-preview.png)
+## Demos
 
-Demo link:
-
-http://t0m.github.com/select2-bootstrap-css/demo/
+http://t0m.github.io/select2-bootstrap-css/

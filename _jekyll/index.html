@@ -1,0 +1,11 @@
+---
+layout: minimal
+---
+
+<h3>Demos</h3>
+
+<ul class="nav">
+  {% for version in site.versions %}
+    <li><a href="{{ version }}.html">Select2 {{ version }}</a></li>
+  {% endfor %}
+</ul>

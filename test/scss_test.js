@@ -5,14 +5,14 @@ exports.compileScss = function(test){
       t = test,
       filename = 'select2-bootstrap.css',
       patchfile = 'test/support/scss.patch',
-      // This is writing to the actual docs folder, generally a no-no for tests to make changes!
+
       child = grunt.util.spawn({
         cmd: 'grunt',
-        args: ['sass']
+        args: ['sass:test']
       }, function() {
         var readFile = function(name) { return fs.readFileSync(name, {encoding: 'utf8'}) },
             orig = readFile(filename),
-            generated = readFile('docs/'+filename),
+            generated = readFile('tmp/'+filename),
             patch = readFile(patchfile),
             diff = jsdiff.createPatch(filename, orig, generated);
 

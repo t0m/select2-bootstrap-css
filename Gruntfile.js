@@ -15,7 +15,13 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'docs/select2-bootstrap.css': 'lib/build.scss'
+          'docs/select2-bootstrap.css': 'lib/build.scss',
+          'select2-bootstrap.css': 'lib/build.scss'
+        }
+      },
+      test: {
+        files: {
+          'tmp/select2-bootstrap.css': 'lib/build.scss'
         }
       }
     }

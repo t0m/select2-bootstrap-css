@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Project configuration.
   grunt.initConfig({
@@ -24,7 +25,12 @@ module.exports = function(grunt) {
           'tmp/select2-bootstrap.css': 'lib/build.scss'
         }
       }
+    },
+
+    jshint: {
+      all: ['Gruntfile.js', '*.json']
     }
+
   });
 
 };

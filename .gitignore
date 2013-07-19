@@ -3,3 +3,4 @@ components
 node_modules
 .sass-cache
 gh-pages
+tmp

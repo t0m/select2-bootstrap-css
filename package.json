@@ -26,6 +26,7 @@
     "diff": "~1.0.4",
     "grunt-contrib-sass": "~0.3.0",
     "bower": "~0.9.2",
-    "grunt-contrib-jshint": "~0.6.0"
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-version": "~0.2.2"
   }
 }

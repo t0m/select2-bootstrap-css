@@ -11,7 +11,7 @@ Tests are included to verify that LESS and SCSS compile down to the target CSS. 
 
 ## Notable Changes
 
-Versions prior to 1.2.0 included a default width for select2 containers. Applying the class "input-default" to you select will line the select2 container up with a default bootstrap text input.
+Versions prior to 1.2.0 included a default width for select2 containers. Applying the class "input-default" to your select will line the select2 container up with a default bootstrap text input.
 
 ## Demos
 

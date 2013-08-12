@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage      = "https://github.com/t0m/select2-bootstrap-css"
   s.summary       = "A stylesheet for making select2 fit in with bootstrap a bit better."
   s.description   = "A stylesheet for making select2 fit in with bootstrap a bit better."
+  s.license       = 'MIT'
 
   s.files         = `git ls-files compass lib`.split("\n")
   s.platform      = Gem::Platform::RUBY

@@ -22,31 +22,23 @@
       <div class="form-group">
         <label for="single" class="control-label">Select2 single select</label>
         <select id="single" class="select2" style="width:100%;">
-          <option></option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
+          {% include select2-select.html %}
         </select>
       </div>
 
       <div class="form-group">
         <label for="multiple" class="control-label">Select2 multi select</label>
         <select id="multiple" class="select2" multiple="multiple" style="width:100%;">
-          <option></option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
+          {% include select2-select.html %}
         </select>
       </div>
 
       <div class="form-group">
         <label for="single-append" class="control-label">Select2 append</label>
         <div class="input-group select2-bootstrap-append">
-          <select id="single-append" class="select2" style="width:100%;">
+          <select id="single-append" class="select2-allow-clear" style="width:100%;">
             <option></option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
+            {% include select2-select.html %}
           </select>
           <span class="input-group-btn">
             <button class="btn btn-default" type="button" data-select2-open="single-append">
@@ -179,7 +171,9 @@
 
     <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
     <script>
-      $('.select2').select2({ placeholder : '' });
+      $('.select2').select2({ placeholder: '' });
+
+      $('.select2-allow-clear').select2({ allowClear: true });
 
       $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
 

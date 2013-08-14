@@ -34,15 +34,45 @@
         </select>
       </div>
 
+      <div class="page-header">
+        <h2>Input Groups</h2>
+      </div>
+
       <div class="form-group">
-        <label for="single-append" class="control-label">Select2 append</label>
-        <div class="input-group select2-bootstrap-append">
+        <label for="single-append" class="control-label">Select2 append Checkbox</label>
+        <div class="input-group select2-bootstrap-prepend">
+          <span class="input-group-addon">
+            <input type="checkbox">
+          </span>
           <select id="single-append" class="select2-allow-clear" style="width:100%;">
             <option></option>
             {% include select2-select.html %}
           </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="single-append" class="control-label">Select2 multi append Radiobutton</label>
+        <div class="input-group select2-bootstrap-prepend">
+          <span class="input-group-addon">
+            <input type="radio">
+          </span>
+          <select id="single-append" class="select2-allow-clear" multiple="multiple" style="width:100%;">
+            <option></option>
+            {% include select2-select.html %}
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="single-append" class="control-label">Select2 append</label>
+        <div class="input-group select2-bootstrap-append">
+          <select id="single-append-text" class="select2-allow-clear" style="width:100%;">
+            <option></option>
+            {% include select2-select.html %}
+          </select>
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button" data-select2-open="single-append">
+            <button class="btn btn-default" type="button">
               <span class="glyphicon glyphicon-search"></span>
             </button>
           </span>

@@ -1,31 +1,10 @@
 /**
- * Select2 Bootstrap CSS 1.0
+ * Select2 Bootstrap CSS 1.2.0
  * Compatible with Select2 3.3.2, 3.4.1, 3.4.2 and Twitter Bootstrap 3 RC2
  * MIT License
  */
 .select2-container {
   vertical-align: middle;
-}
-.select2-container.input-mini {
-  width: 60px;
-}
-.select2-container.input-small {
-  width: 90px;
-}
-.select2-container.input-medium {
-  width: 150px;
-}
-.select2-container.input-large {
-  width: 210px;
-}
-.select2-container.input-xlarge {
-  width: 270px;
-}
-.select2-container.input-xxlarge {
-  width: 530px;
-}
-.select2-container.input-default {
-  width: 220px;
 }
 .select2-container[class*="span"] {
   float: none;

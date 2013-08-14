@@ -54,8 +54,16 @@
   filter: none;
 }
 
+.select2-dropdown-open .select2-choice .select2-arrow {
+  border-left-color: transparent;
+}
+
 .select2-container .select2-choice .select2-arrow b {
   background-position: 0 3px;
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow b {
+  background-position: -18px 3px;
 }
 
 .select2-container .select2-choice div,

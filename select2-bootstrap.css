@@ -74,7 +74,7 @@
 }
 
 .select2-container .select2-choice .select2-arrow {
-border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc;
   background: none;
   filter: none;
 }

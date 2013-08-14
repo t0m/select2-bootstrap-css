@@ -17,31 +17,61 @@
         <li class="{% if version == page.version %}active{% endif %}"><a href="{{ version }}.html">{{ version }}</a></li>
       {% endfor %}
     </ul>
+
     <hr>
-    <form class="form-horizontal">
-      <div class="control-group">
+
+    <form role="form">
+      <div class="form-group">
         <label for="default" class="control-label">Default textbox</label>
-        <div class="controls">
-          <input id="default" type="text" />
-        </div>
+        <input id="default" type="text" class="form-control" />
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="single" class="control-label">Select2 single select</label>
-        <div class="controls">
-          <select id="single" class="select2 input-default">
-            <option></option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-          </select>
-        </div>
+        <select id="single" class="select2" style="width:100%;">
+          <option></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="multiple" class="control-label">Select2 multi select</label>
-        <div class="controls">
-          <select id="multiple" class="select2" multiple="multiple" style="width:400px;">
+        <select id="multiple" class="select2" multiple="multiple" style="width:100%;">
+          <option></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="single-append" class="control-label">Select2 append</label>
+        <div class="input-group select2-bootstrap-append">
+          <select id="single-append" class="select2" style="width:100%;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="single-append">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="single-prepend" class="control-label">Select2 prepend</label>
+        <div class="input-group select2-bootstrap-prepend">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="single-prepend">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+          <select id="single-prepend" class="select2" style="width:100%;">
             <option></option>
             <option value="A">A</option>
             <option value="B">B</option>
@@ -50,92 +80,60 @@
         </div>
       </div>
 
-      <div class="control-group">
-        <label for="single-append" class="control-label">Select2 append</label>
-        <div class="controls">
-          <div class="input-append">
-            <select id="single-append" class="select2" style="width:400px;">
-              <option></option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-            </select>
-            <button class="btn" type="button" data-select2-open="single-append">
-              <i class="icon-search"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label for="single-prepend" class="control-label">Select2 prepend</label>
-        <div class="controls">
-          <div class="input-prepend">
-            <button class="btn" type="button" data-select2-open="single-prepend">
-              <i class="icon-search"></i>
-            </button>
-            <select id="single-prepend" class="select2" style="width:400px;">
-              <option></option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="control-group">
+      <div class="form-group">
         <label for="multi-append" class="control-label">Select2 multi append</label>
-        <div class="controls">
-          <div class="input-append">
-            <select id="multi-append" class="select2" multiple="multiple" style="width:400px;">
-              <option></option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-            </select>
-            <button class="btn" type="button" data-select2-open="multi-append">
-              <i class="icon-search"></i>
+        <div class="input-group select2-bootstrap-append">
+          <select id="multi-append" class="select2" multiple="multiple" style="width:100%;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="multi-append">
+              <span class="glyphicon glyphicon-search"></span>
             </button>
-          </div>
+          </span>
         </div>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="multi-prepend" class="control-label">Select2 multi prepend</label>
-        <div class="controls">
-          <div class="input-prepend">
-            <button class="btn" type="button" data-select2-open="multi-prepend">
-              <i class="icon-search"></i>
+        <div class="input-group select2-bootstrap-prepend">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="multi-prepend">
+              <span class="glyphicon glyphicon-search"></span>
             </button>
-            <select id="multi-prepend" class="select2" multiple="multiple" style="width:400px;">
-              <option></option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-            </select>
-          </div>
+          </span>
+          <select id="multi-prepend" class="select2" multiple="multiple" style="width:100%;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
         </div>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="remote-load" class="control-label">Select2 custom data load</label>
-        <div class="controls">
-          <div class="input-prepend input-append">
-            <button class="btn" type="button" data-select2-open="remote-load">
-              <i class="icon-search"></i>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="remote-load">
+              <span class="glyphicon glyphicon-search"></span>
             </button>
-            <input id="remote-load" type="hidden" class="select2-remote" style="width:400px;">
-            <button class="btn" type="button" data-select2-open="remote-load">
-              <i class="icon-search"></i>
+          </span>
+          <input id="remote-load" type="hidden" class="select2-remote" style="width:400px">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="remote-load">
+              <span class="glyphicon glyphicon-search"></span>
             </button>
-          </div>
+          </span>
         </div>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="single" class="control-label">Select2 single select sizes</label>
-        <div class="controls">
+        <div class="input-group">
           <select id="span_small" class="select2 input-small">
             <option></option>
             <option value="A">A</option>
@@ -157,9 +155,9 @@
         </div>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <label for="single" class="control-label">Select2 single select spans</label>
-        <div class="controls">
+        <div class="input-group">
           <select id="span_1" class="select2 span1">
             <option></option>
             <option value="A">A</option>
@@ -184,7 +182,7 @@
 
     <script>
       $('.select2').select2({ placeholder : '' });
-      
+
       $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
 
       $('button[data-select2-open]').click(function(){

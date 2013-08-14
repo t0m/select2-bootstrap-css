@@ -54,8 +54,12 @@
   filter: none;
 }
 
+.select2-container .select2-choice div,
+.select2-container.select2-container-disabled .select2-choice div,
 .select2-dropdown-open .select2-choice .select2-arrow {
   border-left-color: transparent;
+  background: none;
+  filter: none;
 }
 
 .select2-container .select2-choice .select2-arrow b {
@@ -64,13 +68,6 @@
 
 .select2-dropdown-open .select2-choice .select2-arrow b {
   background-position: -18px 3px;
-}
-
-.select2-container .select2-choice div,
-.select2-container.select2-container-disabled .select2-choice div {
-  border-left: none;
-  background: none;
-  filter: none;
 }
 
 .form-group.error [class^="select2-choice"] {

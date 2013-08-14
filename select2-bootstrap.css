@@ -6,27 +6,6 @@
 .select2-container {
   vertical-align: middle;
 }
-.select2-container.input-mini {
-  width: 60px;
-}
-.select2-container.input-small {
-  width: 90px;
-}
-.select2-container.input-medium {
-  width: 150px;
-}
-.select2-container.input-large {
-  width: 210px;
-}
-.select2-container.input-xlarge {
-  width: 270px;
-}
-.select2-container.input-xxlarge {
-  width: 530px;
-}
-.select2-container.input-default {
-  width: 220px;
-}
 .select2-container[class*="span"] {
   float: none;
   margin-left: 0;

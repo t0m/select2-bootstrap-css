@@ -4,21 +4,14 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ivaynberg.github.io/select2/select2-{{ page.version }}/select2.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://ivaynberg.github.io/select2/select2-{{ page.version }}/select2.css"/>
-    <link href="http://twbs.github.io/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="http://glyphicons.getbootstrap.com/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="select2-bootstrap.css"/>
+    <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-{{ page.version }}/select2.css">
+    <link rel="stylesheet" href="http://twbs.github.io/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://glyphicons.getbootstrap.com/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="select2-bootstrap.css">
+    <link rel="stylesheet" href="gh-pages.css">
   </head>
-  <body style="margin:20px;">
-    <h1>Select2 version {{ page.version }}</h1>
-
-    <ul class="nav nav-tabs">
-      {% for version in site.versions %}
-        <li class="{% if version == page.version %}active{% endif %}"><a href="{{ version }}.html">{{ version }}</a></li>
-      {% endfor %}
-    </ul>
-
-    <hr>
+  <body>
+    {% include navbar.html %}
 
     <form role="form">
       <div class="form-group">
@@ -184,6 +177,7 @@
       </div>
     </form>
 
+    <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
     <script>
       $('.select2').select2({ placeholder : '' });
 

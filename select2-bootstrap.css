@@ -125,7 +125,8 @@
  * then replaced by a select2 input when javascript kicks in. This can be 
  * removed if javascript is not present 
  */
-select.select2 {
+select.select2,
+select.select2-allow-clear {
   height: 34px;
   visibility: hidden;
 }

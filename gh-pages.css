@@ -1,3 +1,111 @@
-body {
+.demo {
 	padding: 80px 30px 30px;
+}
+
+/* the gh-pages landing page, styles borrowed from getbootstrap.com */
+body {
+  font-weight: 300;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 700px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.jumbotron {
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  color: rgba(255,255,255,.75);
+  text-align: center;
+  background-color: #3d427a;
+  border-radius: 0;
+}
+
+.jumbotron h1,
+.jumbotron .glyphicon-list {
+  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+.jumbotron .glyphicon-list {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.btn-outline {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 18px 24px;
+  font-size: inherit;
+  font-weight: 500;
+  color: #fff; /* redeclare to override the `.jumbotron a` */
+  background-color: transparent;
+  border-color: #fff;
+  border-color: rgba(255,255,255,.5);
+  transition: all .1s ease-in-out;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  color: #3d427a;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.jumbotron p a,
+.jumbotron-links a {
+  font-weight: 500;
+  color: #fff;
+  transition: all .1s ease-in-out;
+}
+
+.jumbotron-links {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.jumbotron-links li {
+  display: inline;
+}
+
+.jumbotron-links li + li {
+  margin-left: 20px;
+}
+
+.jumbotron hr {
+	border-color: #fff;
+	border-color: rgba(255,255,255,.2);
+	width: 100px;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 21px;
+  }
+  .jumbotron h1,
+  .jumbotron .glyphicon-list {
+    font-size: 50px;
+  }
+}
+
+.footer {
+	text-align: center;
 }

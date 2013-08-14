@@ -141,6 +141,16 @@
   border-top-right-radius: 0;
 }
 
+.select2-results .select2-highlighted {
+  background-color: #357EBD;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#428BCA), to(#357EBD));
+  background-image: -webkit-linear-gradient(top, #428BCA, 0%, #357EBD, 100%);
+  background-image: -moz-linear-gradient(top, #428BCA 0%, #357EBD 100%);
+  background-image: linear-gradient(to bottom, #428BCA 0%, #357EBD 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
+}
+
 [class^="input-"] .select2-offscreen {
   position: absolute;
 }

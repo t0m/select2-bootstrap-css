@@ -21,14 +21,14 @@
 
       <div class="form-group">
         <label for="single" class="control-label">Select2 single select</label>
-        <select id="single" class="form-control select2" style="width:100%;">
+        <select id="single" class="form-control select2">
           {% include select2-select.html %}
         </select>
       </div>
 
       <div class="form-group">
         <label for="multiple" class="control-label">Select2 multi select</label>
-        <select id="multiple" class="form-control select2-multi" multiple="multiple" style="width:100%;">
+        <select id="multiple" class="form-control select2-multi" multiple="multiple">
           <option></option>
           {% include select2-select.html %}
         </select>
@@ -44,7 +44,7 @@
           <span class="input-group-addon">
             <input type="checkbox">
           </span>
-          <select id="single-append" class="form-control select2-allow-clear" style="width:100%;">
+          <select id="single-append" class="form-control select2-allow-clear">
             <option></option>
             {% include select2-select.html %}
           </select>
@@ -57,7 +57,7 @@
           <span class="input-group-addon">
             <input type="radio">
           </span>
-          <select id="single-append" class="form-control select2-allow-clear" multiple="multiple" style="width:100%;">
+          <select id="single-append" class="form-control select2-allow-clear" multiple="multiple">
             <option></option>
             {% include select2-select.html %}
           </select>
@@ -67,7 +67,7 @@
       <div class="form-group">
         <label for="single-append" class="control-label">Select2 append</label>
         <div class="input-group select2-bootstrap-append">
-          <select id="single-append-text" class="form-control select2-allow-clear" style="width:100%;">
+          <select id="single-append-text" class="form-control select2-allow-clear">
             <option></option>
             {% include select2-select.html %}
           </select>
@@ -87,7 +87,7 @@
               <span class="glyphicon glyphicon-search"></span>
             </button>
           </span>
-          <select id="single-prepend" class="form-control select2" style="width:100%;">
+          <select id="single-prepend" class="form-control select2">
             <option></option>
             <option value="A">A</option>
             <option value="B">B</option>
@@ -99,7 +99,7 @@
       <div class="form-group">
         <label for="multi-append" class="control-label">Select2 multi append</label>
         <div class="input-group select2-bootstrap-append">
-          <select id="multi-append" class="form-control select2" multiple="multiple" style="width:100%;">
+          <select id="multi-append" class="form-control select2" multiple="multiple">
             <option></option>
             <option value="A">A</option>
             <option value="B">B</option>

@@ -30,7 +30,7 @@ Index: select2-bootstrap.css
  }
 -
  .select2-container .select2-choice .select2-arrow {
-   border-left: 1px solid #ccc;
+   border-left: 1px solid #cccccc;
    background: none;
    filter: none;
  }

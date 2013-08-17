@@ -8,6 +8,6 @@
   ],
   "devDependencies": {
     "bootstrap": "3.0.0-rc.2",
-    "sass-bootstrap": "git://github.com/jlong/sass-twitter-bootstrap.git#~2.3.1"
+    "sass-bootstrap": "git://github.com/jlong/sass-twitter-bootstrap.git#9fcfa0da4c4f9ace9a80c785dfd6ebc4c0ef5717"
   }
 }

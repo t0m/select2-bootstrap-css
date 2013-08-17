@@ -4,10 +4,6 @@
  * MIT License
  */
 
-.select2-container[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
 
 .select2-container.form-control {
   margin: 0;

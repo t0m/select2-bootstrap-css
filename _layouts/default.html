@@ -128,9 +128,9 @@
     </div>
 
     <div class="container">
-        <div class="page-header">
-          <h2>Grid</h2>
-        </div>
+      <div class="page-header">
+        <h2>Grid</h2>
+      </div>
       <div class="row">
         <div class="col-md-2">
           <label for="span_small">col-md-2</label>
@@ -143,29 +143,18 @@
           <input id="span_medium" class="form-control" placeholder=".col-md-5">
         </div>
         <div class="col-md-5">
-
-
-
-
-
-    <div class="form-group">
-      <label for="span_large">col-md-6</label>
-      <div class="input-group select2-bootstrap-prepend">
-        <span class="input-group-addon">
-          <input type="checkbox">
-        </span>
-
-
-
-
-
-          
-          <select id="span_large" class="form-control select2">
-            <option></option>
-            {% include select2-select.html %}
-          </select>      </div>
-    </div>
-
+          <div class="form-group">
+            <label for="span_large">col-md-6</label>
+            <div class="input-group select2-bootstrap-prepend">
+              <span class="input-group-addon">
+                <input type="checkbox">
+              </span>
+              <select id="span_large" class="form-control select2">
+                <option></option>
+                {% include select2-select.html %}
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -191,15 +180,6 @@
             {% include select2-select.html %}
           </select>
           <span class="help-block"><code>span.help-block</code> A block of help text that breaks onto a new line and may extend beyond one line.</span>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-2">
         </div>
       </div>
     </div>
@@ -209,12 +189,12 @@
       $('.select2').select2({ placeholder: '' });
       $('.select2-multi').select2({ placeholder: "Select a State", closeOnSelect: false });
       $('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
-
       $('.select2-remote').select2({ placeholder: 'Remote Data', data: [{id:'A', text:'A'}, {id:'B', text:'B'}, {id:'C', text:'C'} ] });
 
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');
       });
     </script>
+
   </body>
 </html>

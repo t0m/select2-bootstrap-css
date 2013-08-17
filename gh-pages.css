@@ -2,9 +2,8 @@
 	padding: 80px 30px 30px;
 }
 
-/* the gh-pages landing page, styles borrowed from getbootstrap.com */
-body {
-  font-weight: 300;
+.home .container {
+  max-width: 700px;
 }
 
 a:hover,
@@ -12,37 +11,26 @@ a:focus {
   text-decoration: none;
 }
 
-.container {
-  max-width: 700px;
+.jumbotron {
+  position: relative;
+  color: #999;
+  color: rgba(0,0,0,.35);
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 0;
+  font-weight: normal;
+}
+
+.jumbotron h1 {
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+  color: #999;
 }
 
 .jumbotron h2 {
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 16px;
-}
-
-.jumbotron {
-  position: relative;
-  font-size: 16px;
-  color: #fff;
-  color: rgba(255,255,255,.75);
-  text-align: center;
-  background-color: #3d427a;
-  border-radius: 0;
-}
-
-.jumbotron h1,
-.jumbotron .glyphicon-list {
-  margin-bottom: 15px;
-  font-weight: 300;
-  letter-spacing: -1px;
-  color: #fff;
-}
-
-.jumbotron .glyphicon-list {
-  font-size: 40px;
-  line-height: 1;
 }
 
 .btn-outline {
@@ -50,25 +38,24 @@ a:focus {
   margin-bottom: 15px;
   padding: 18px 24px;
   font-size: inherit;
-  font-weight: 500;
-  color: #fff; /* redeclare to override the `.jumbotron a` */
+  color: #aaa; /* redeclare to override the `.jumbotron a` */
   background-color: transparent;
-  border-color: #fff;
-  border-color: rgba(255,255,255,.5);
+  border-color: #000;
+  border-color: rgba(0,0,0,.2);
   transition: all .1s ease-in-out;
 }
 
 .btn-outline:hover,
 .btn-outline:active {
-  color: #3d427a;
-  background-color: #fff;
-  border-color: #fff;
+  color: #f8f8f8;
+  background-color: #333;
+  border-color: #333;
 }
 
 .jumbotron p a,
 .jumbotron-links a {
   font-weight: 500;
-  color: #fff;
+  color: #000;
   transition: all .1s ease-in-out;
 }
 
@@ -89,9 +76,29 @@ a:focus {
 }
 
 .jumbotron hr {
-	border-color: #fff;
-	border-color: rgba(255,255,255,.2);
+	border-color: #999;
+	border-color: rgba(0,0,0,.1);
 	width: 100px;
+}
+
+.jumbotron .select2-wrapper {
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.jumbotron .form-group {
+  background: none;
+  margin-bottom: 0;
+}
+
+.footer {
+  text-align: center;
+    color: #999;
 }
 
 @media (min-width: 768px) {
@@ -100,12 +107,10 @@ a:focus {
     padding-bottom: 100px;
     font-size: 21px;
   }
-  .jumbotron h1,
-  .jumbotron .glyphicon-list {
+  .jumbotron .select2-wrapper {
+    margin-bottom: 6em;
+  }
+  .jumbotron h1 {
     font-size: 50px;
   }
-}
-
-.footer {
-	text-align: center;
 }

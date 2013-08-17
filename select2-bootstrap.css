@@ -3,7 +3,9 @@
  * Compatible with Select2 3.3.2, 3.4.1, 3.4.2 and Twitter Bootstrap 3 RC2
  * MIT License
  */
-.select2-container.form-control {
+
+.select2-container.form-control,
+.select2-container-multi {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -111,6 +113,25 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
 }
 
+.select2-container.form-control, .select2-container-multi {
+  height: auto;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #cccccc;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice-focus {
+  background: #ebebeb;
+  border-color: #adadad;
+  color: #333;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .select2-container .select2-choice abbr {
   top: 9px;
 }
@@ -126,16 +147,4 @@
 
 [class^="input-"] .select2-offscreen {
   position: absolute;
-}
-
-/**
- * This stops the quick flash when a native selectbox is shown and 
- * then replaced by a select2 input when javascript kicks in. This can be 
- * removed if javascript is not present 
- */
-select.select2,
-select.select2-multi,
-select.select2-allow-clear {
-  height: 34px;
-  visibility: hidden;
 }

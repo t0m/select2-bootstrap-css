@@ -7,7 +7,7 @@
     "components"
   ],
   "devDependencies": {
-    "bootstrap": "~2.3.1",
+    "bootstrap": "3.0.0-rc.2",
     "sass-bootstrap": "git://github.com/jlong/sass-twitter-bootstrap.git#~2.3.1"
   }
 }

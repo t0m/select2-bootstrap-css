@@ -2,7 +2,7 @@ Index: select2-bootstrap.css
 ===================================================================
 --- select2-bootstrap.css
 +++ select2-bootstrap.css
-@@ -9,96 +9,80 @@
+@@ -9,132 +9,110 @@
    padding: 0;
    background: transparent;
    border: none;
@@ -97,13 +97,9 @@ Index: select2-bootstrap.css
  }
 -
  .select2-results .select2-highlighted {
-   background-color: #357EBD;
-   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#428bca), to(#357ebd));
-   background-image: -webkit-linear-gradient(top, #428bca, 0%, #357ebd, 100%);
-@@ -106,40 +90,34 @@
-   background-image: linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
-   background-repeat: repeat-x;
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
++  color: #ffffff;
+-  color: white;
+   background-color: #357ebd;
  }
 +.select2-container.form-control,
 +.select2-container-multi {

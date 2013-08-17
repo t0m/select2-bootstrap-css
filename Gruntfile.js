@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     nodeunit: {
       all: ['test/*_test.js']
     },
-    
+
     sass: {
       options: {
         style: 'expanded'

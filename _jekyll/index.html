@@ -1,11 +1,72 @@
 ---
 layout: minimal
 ---
+<div class="jumbotron">
+	<div class="container">
+		<div class="select2-wrapper">
+			<div class="input-groupdd select2-bootstrap-append" id="multi-select2">
+				<div id="single-select2">
+					<select id="single" class="form-control select2" style="width:100% !important">
+					{% include select2-select.html %}
+					</select>
+				</div>
+				<div id="single-select">
+					<select id="multiple" class="form-control select2-multi" multiple="multiple">
+					<option></option>
+					{% include select2-select.html %}
+					</select>
+				</div>
+			</div>
+		</div>
 
-<h3>Demos</h3>
+		<h1>Select2 Bootstrap CSS</h1>
 
-<ul class="nav">
-  {% for version in site.versions %}
-    <li><a href="{{ version }}.html">Select2 {{ version }}</a></li>
-  {% endfor %}
-</ul>
+		<p>Simple CSS to make <a href="http://ivaynberg.github.io/select2/">Select2</a> widgets fit in with <a href="http://getbootstrap.com/">Bootstrap</a>, ready for use in CSS, LESS, Sass and Compass flavors.</p>
+
+		<a href="https://github.com/t0m/select2-bootstrap-css/archive/v1.2.0.zip" class="btn btn-outline btn-large">Download from GitHub</a>
+
+		<ul class="jumbotron-links">
+			<li>
+				<a href="http://github.com/t0m/select2-bootstrap-css">GitHub project</a>
+			</li>
+			<li>
+				<a href="http://ivaynberg.github.io/select2/">Select2</a>
+			</li>
+			<li>
+				<a href="http://getbootstrap.com">Bootstrap</a>
+			</li>
+			<li>Version&nbsp;1.2.0</li>
+		</ul>
+
+		<hr>
+
+		<h2>Demos</h2>
+
+		<ul class="jumbotron-links">
+			{% for version in site.versions %}
+				<li><a href="{{ version }}.html">Select2 {{ version }}</a></li>
+			{% endfor %}
+		</ul>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<p>
+			<a href="http://getbootstrap.com">Bootstrap</a> is a front-end framework for fast, sleek, and mobile-first web development.<br>
+			<a href="http://select2.com">Select2</a> is a jQuery based replacement for select boxes.
+		</p>
+		<p><a href="https://twitter.com/tterrace">&lt;3 @tterrace</a></p>
+	</div>
+</div>
+
+<script>
+	$('.select2').select2({ placeholder: '' });
+	$('.select2-multi').select2({ placeholder: "Select a State", maximumSelectionSize: 10, closeOnSelect: false });
+	$('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
+	$('#single-select2').hide();
+	$('button[data-select2-open]').click(function(){
+		$('#' + $(this).data('select2-open')).select2('open');
+	});
+</script>

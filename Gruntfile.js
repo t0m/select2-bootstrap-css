@@ -15,6 +15,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'docs/select2-bootstrap.css': 'lib/build.scss',
+          '_jekyll/select2-bootstrap.css': 'lib/build.scss',
           'select2-bootstrap.css': 'lib/build.scss'
         }
       },

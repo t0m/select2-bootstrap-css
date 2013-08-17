@@ -21,13 +21,16 @@ layout: minimal
 
 		<h1>Select2 Bootstrap CSS</h1>
 
-		<p>Simple CSS to make <a href="http://ivaynberg.github.io/select2/">Select2</a> widgets fit in with <a href="http://getbootstrap.com/">Bootstrap</a>, ready for use in CSS, LESS, Sass and Compass flavors.</p>
+		<p>Simple CSS to make <a href="http://ivaynberg.github.io/select2/">Select2</a> fit in with <a href="http://getbootstrap.com/">Bootstrap</a>, ready for use in CSS, LESS, Sass and Compass flavors.</p>
 
-		<a href="https://github.com/t0m/select2-bootstrap-css/archive/v1.2.0.zip" class="btn btn-outline btn-large">Download from GitHub</a>
+		<a href="https://raw.github.com/fk/select2-bootstrap-css/master/select2-bootstrap.css" class="btn btn-outline btn-large">Download from GitHub</a>
 
 		<ul class="jumbotron-links">
 			<li>
-				<a href="http://github.com/t0m/select2-bootstrap-css">GitHub project</a>
+				<a href="http://github.com/fk/select2-bootstrap-css">GitHub project</a>
+			</li>
+			<li>
+				<a href="http://github.com/t0m/select2-bootstrap-css">Bootstrap 2 version</a>
 			</li>
 			<li>
 				<a href="http://ivaynberg.github.io/select2/">Select2</a>
@@ -62,11 +65,5 @@ layout: minimal
 </div>
 
 <script>
-	$('.select2').select2({ placeholder: '' });
 	$('.select2-multi').select2({ placeholder: "Select a State", maximumSelectionSize: 10, closeOnSelect: false });
-	$('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
-	$('#single-select2').hide();
-	$('button[data-select2-open]').click(function(){
-		$('#' + $(this).data('select2-open')).select2('open');
-	});
 </script>

@@ -213,6 +213,7 @@
 .select2-container-multi .select2-choices .select2-search-choice {
   background: white;
   border-color: #cccccc;
+  filter: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }

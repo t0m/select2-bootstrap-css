@@ -74,10 +74,8 @@ a:focus {
 
 .jumbotron-links li {
   display: inline;
-}
-
-.jumbotron-links li + li {
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .jumbotron hr {

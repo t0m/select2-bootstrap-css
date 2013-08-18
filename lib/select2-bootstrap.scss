@@ -84,6 +84,7 @@
 /**
  * Adjust the dropdown arrow button icon position for the single-select Select2 elements
  * to make it line up vertically now that we increased the height of .select2-container.
+ * @todo Position values should be based on $input-height-*
  */
 
 .select2-container .select2-choice .select2-arrow b {
@@ -92,6 +93,22 @@
 
 .select2-dropdown-open .select2-choice .select2-arrow b {
   background-position: -18px 3px;
+}
+
+.select2-container.input-sm .select2-choice .select2-arrow b {
+  background-position: 0 1px;
+}
+
+.select2-dropdown-open.input-sm .select2-choice .select2-arrow b {
+  background-position: -18px 1px;
+}
+
+.select2-container.input-lg .select2-choice .select2-arrow b {
+  background-position: 0 11px;
+}
+
+.select2-dropdown-open.input-lg .select2-choice .select2-arrow b {
+  background-position: -18px 11px;
 }
 
 /**
@@ -234,11 +251,13 @@
 }
 
 /**
- * Adjust "no results"-message to make use of Bootstrap 3's default "Alert" style.
+ * Adjust "no results" and "selection limit" messages to make use
+ * of Bootstrap 3's default "Alert" style.
  * @see http://getbootstrap.com/components/#alerts-default
  */
 
-.select2-results .select2-no-results {
+.select2-results .select2-no-results,
+.select2-results .select2-selection-limit {
   background-color: $state-warning-bg;
   color: $state-warning-text;
 }
@@ -248,7 +267,7 @@
  */
 
 .select2-container.select2-container-disabled {
-  .select2-choice{
+  .select2-choice {
     cursor: not-allowed;
     .select2-arrow {
       background-color: transparent;

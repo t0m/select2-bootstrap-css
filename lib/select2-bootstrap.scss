@@ -228,6 +228,7 @@
 .select2-container-multi .select2-choices .select2-search-choice {
   background: $btn-default-bg;
   border-color: $btn-default-border;
+  filter: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }

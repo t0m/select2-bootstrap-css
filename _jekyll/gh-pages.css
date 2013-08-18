@@ -2,6 +2,12 @@
 	padding: 80px 30px 30px;
 }
 
+.demo .footer {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
 .home .container {
   max-width: 700px;
 }

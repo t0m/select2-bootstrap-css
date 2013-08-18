@@ -48,18 +48,10 @@ version: 3.4.2
 	</div>
 </div>
 
-<div class="footer">
-	<div class="container">
-		<p>
-			<a href="http://getbootstrap.com">Bootstrap</a> is a front-end framework for fast, sleek, and mobile-first web development.<br>
-			<a href="http://select2.com">Select2</a> is a jQuery based replacement for select boxes.
-		</p>
-		<p><a href="https://twitter.com/tterrace">&lt;3 @tterrace</a></p>
-	</div>
-</div>
+{% include footer.html %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://ivaynberg.github.io/select2/select2-3.4.2/select2.js"></script>
 <script>
-	$('.select2').select2({ placeholder: "Select a State", maximumSelectionSize: 10, closeOnSelect: false });
+	$('.select2').select2({ placeholder: "Select a State", maximumSelectionSize: 6 });
 </script>

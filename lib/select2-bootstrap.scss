@@ -15,9 +15,9 @@
 .select2-search .select2-input,
 .select2-container .select2-choice,
 .select2-container-multi .select2-choices {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $font-family-sans-serif;
+  color: $gray;
   border-color: $input-border;
-  color: #555;
   border-radius: $input-border-radius;
   background: none;
   background-color: $input-bg;

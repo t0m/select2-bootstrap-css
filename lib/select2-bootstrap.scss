@@ -40,7 +40,8 @@
  */
 
 .select2-container .select2-choice,
-.select2-container-multi .select2-choices {
+.select2-container-multi .select2-choices,
+.select2-container .select2-arrow {
   min-height: $input-height-base;
   line-height: $input-height-base + 1px;
 }

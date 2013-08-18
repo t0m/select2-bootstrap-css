@@ -44,10 +44,9 @@ a:focus {
   margin-bottom: 15px;
   padding: 18px 24px;
   font-size: inherit;
-  color: #aaa; /* redeclare to override the `.jumbotron a` */
+  color: #aaa;
   background-color: transparent;
-  border-color: #000;
-  border-color: rgba(0,0,0,.2);
+  border-color: #ddd;
   transition: all .1s ease-in-out;
 }
 
@@ -82,8 +81,7 @@ a:focus {
 }
 
 .jumbotron hr {
-	border-color: #999;
-	border-color: rgba(0,0,0,.1);
+	border-color: #ddd;
 	width: 100px;
 }
 
@@ -104,8 +102,10 @@ a:focus {
 
 .jumbotron .select2-wrapper {
   margin-bottom: 20px;
+  transition: all .1s ease-in-out;
 }
 
+.jumbotron select,
 .jumbotron .select2-container {
   margin-bottom: 16px;
 }

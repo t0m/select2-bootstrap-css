@@ -53,6 +53,7 @@
 .input-group-sm .select2-container-multi .select2-choices {
   min-height: 30px;
   line-height: 31px;
+  border-radius: 3px;
 }
 
 .select2-container.input-lg .select2-choice,
@@ -61,6 +62,7 @@
 .input-group-lg .select2-container-multi .select2-choices {
   min-height: 45px;
   line-height: 46px;
+  border-radius: 6px;
 }
 
 .select2-container-multi.input-sm .select2-choices .select2-search-choice,
@@ -185,23 +187,23 @@
  * @see http://getbootstrap.com/components/#input-groups
  */
 .input-group.select2-bootstrap-prepend [class^="select2-choice"] {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 
 .input-group.select2-bootstrap-append [class^="select2-choice"] {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 .select2-dropdown-open [class^="select2-choice"] {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 
 /**

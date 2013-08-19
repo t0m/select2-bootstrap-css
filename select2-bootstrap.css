@@ -29,6 +29,7 @@
   background: none;
   background-color: white;
   filter: none;
+  padding: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -40,7 +41,7 @@
 .select2-container-multi .select2-choices,
 .select2-container .select2-arrow {
   min-height: 34px;
-  line-height: 35px;
+  line-height: 1.42857;
 }
 
 /**
@@ -52,7 +53,7 @@
 .input-group-sm .select2-container .select2-choice,
 .input-group-sm .select2-container-multi .select2-choices {
   min-height: 30px;
-  line-height: 31px;
+  line-height: 1.5;
   border-radius: 3px;
 }
 
@@ -61,7 +62,7 @@
 .input-group-lg .select2-container .select2-choice,
 .input-group-lg .select2-container-multi .select2-choices {
   min-height: 45px;
-  line-height: 46px;
+  line-height: 1.33;
   border-radius: 6px;
 }
 
@@ -131,19 +132,70 @@
 }
 
 /**
- * Error styles from the original select2-bootstrap-css targeted at Bootstrap 2.
- * @todo: Implement test/demo and fix styles.
+ * Address Bootstrap's validation states and change Select2's border colors and focus states.
  */
-.form-group.error [class^="select2-choice"] {
+.has-warning .select2-choice,
+.has-warning .select2-choices {
+  border-color: #c09853;
+}
+.has-warning .select2-container-active .select2-choice,
+.has-warning .select2-container-multi.select2-container-active .select2-choices {
+  border-color: #a47e3c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+}
+.has-warning.select2-drop-active {
+  border-color: #a47e3c !important;
+}
+
+.has-error .select2-choice,
+.has-error .select2-choices {
   border-color: #b94a48;
+}
+.has-error .select2-container-active .select2-choice,
+.has-error .select2-container-multi.select2-container-active .select2-choices {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+.has-error.select2-drop-active {
+  border-color: #953b39 !important;
+}
+
+.has-success .select2-choice,
+.has-success .select2-choices {
+  border-color: #468847;
+}
+.has-success .select2-container-active .select2-choice,
+.has-success .select2-container-multi.select2-container-active .select2-choices {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+.has-success.select2-drop-active {
+  border-color: #356635 !important;
 }
 
 /**
- * .select2-search-field for multi-select Select2 widgets.
+ * Adjust height and line-height for .select2-search-field amd multi-select Select2 widgets.
  */
-.select2-container-multi .select2-choices .select2-search-field {
-  height: 32px;
-  line-height: 20px;
+.select2-chosen,
+.select2-container .select2-choices .select2-search-field input {
+  padding: 6px 12px;
+}
+
+.input-sm .select2-chosen,
+.input-group-sm .select2-chosen,
+.input-sm .select2-choices .select2-search-field input,
+.input-group-sm .select2-choices .select2-search-field input {
+  padding: 5px 10px;
+}
+
+.input-lg .select2-chosen,
+.input-group-lg .select2-chosen,
+.input-lg .select2-choices .select2-search-field input,
+.input-group-lg .select2-choices .select2-search-field input {
+  padding: 10px 16px;
 }
 
 /**
@@ -162,10 +214,6 @@
 
 .select2-drop-active {
   border-color: #66afe9;
-}
-
-[class^="input-"] .select2-container {
-  font-size: 14px;
 }
 
 /**

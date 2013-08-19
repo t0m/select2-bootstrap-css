@@ -25,7 +25,7 @@
     </div>
 
     <div class="page-header">
-      <h3>Input Groups <small><a href="http://getbootstrap.com/components/#input-groups"#></a> http://getbootstrap.com/components/#input-groups</small></h3>
+      <h3>Input Groups <small><a href="http://getbootstrap.com/components/#input-groups" data-toggle="tooltip" data-placement="right" title="http://getbootstrap.com/components/#input-groups">#</a></small></h3>
     </div>
 
     <div class="form-group">
@@ -121,29 +121,29 @@
     <div class="container">
 
       <div class="page-header">
-        <h3>Control sizing <small><a href="http://getbootstrap.com/css/#forms-control-sizes">#</a> http://getbootstrap.com/css/#forms-control-sizes</small></h3>
+        <h3>Control sizing <small><a href="http://getbootstrap.com/css/#forms-control-sizes" data-toggle="tooltip" data-placement="right" title="http://getbootstrap.com/css/#forms-control-sizes">#</a></small></h3>
       </div>
 
       <div class="row">
         <div class="col-md-4">
-          <label for="select2-multiple-input-sm">col-md-4</label>
+          <label for="select2-multiple-input-sm" class="control-label">col-md-4</label>
           <select id="select2-multiple-input-sm" class="form-control input-sm select2-multiple" multiple>
             {% include select2-select.html %}
           </select>
         </div>
         <div class="col-md-3">
-          <label for="select2-multiple-input-sm">col-md-3</label>
-          <select id="select2-multiple-input-sm" class="form-control input-sm select2">
+          <label for="select2-multiple-input-sm" class="control-label">col-md-3</label>
+          <select id="select2-multiple-input-sm" class="form-control input-sm select2-multiple">
             {% include select2-select.html %}
           </select>
         </div>
         <div class="col-md-2">
-          <label for="bootstrap-input-sm">Bootstrap input</label>
+          <label for="bootstrap-input-sm" class="control-label">Bootstrap input</label>
           <input id="bootstrap-input-sm" class="form-control input-sm" placeholder=".input-sm">
         </div>
         <div class="col-md-3">
-          <div class="form-group">
-            <label for="select2-single-input-group-sm">col-md-3</label>
+          <div class="form-group has-success">
+            <label for="select2-single-input-group-sm" class="control-label">col-md-3</label>
             <div class="input-group input-group-sm select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="radio">
@@ -158,14 +158,14 @@
       </div>
 
       <div class="row">
-        <div class="col-md-4">
-          <label for="select2-multiple">col-md-4</label>
+        <div class="col-md-4 has-warning">
+          <label for="select2-multiple" class="control-label">col-md-4</label>
           <select id="select2-multiple" class="form-control select2-multiple" multiple>
             {% include select2-select.html %}
           </select>
         </div>
         <div class="col-md-3">
-          <label for="span_small">col-md-3</label>
+          <label for="span_small" class="control-label">col-md-3</label>
           <select id="span_small" class="form-control select2">
             {% include select2-select.html %}
           </select>
@@ -176,12 +176,12 @@
         </div>
         <div class="col-md-3">
           <div class="form-group">
-            <label for="span_large">col-md-3</label>
+            <label for="span_large" class="control-label">col-md-3</label>
             <div class="input-group select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="checkbox">
               </span>
-              <select id="span_large" class="form-control select2" multiple>
+              <select id="span_large" class="form-control select2-multiple" multiple>
                 <option></option>
                 {% include select2-select.html %}
               </select>
@@ -192,30 +192,29 @@
 
       <div class="row">
         <div class="col-md-4">
-          <label for="select2-multiple-input-lg">col-md-4</label>
+          <label for="select2-multiple-input-lg" class="control-label">col-md-4</label>
           <select id="select2-multiple-input-lg" class="form-control input-lg select2-multiple" multiple>
             {% include select2-select.html %}
           </select>
         </div>
         <div class="col-md-3">
-          <label for="span-small">col-md-5</label>
+          <label for="span-small" class="control-label">col-md-5</label>
           <select id="span-small" class="form-control input-lg select2-multiple">
             {% include select2-select.html %}
           </select>
         </div>
         <div class="col-md-2">
-          <label for="bootstrap-input-lg">Bootstrap input</label>
+          <label for="bootstrap-input-lg" class="control-label">Bootstrap input</label>
           <input id="bootstrap-input-lg" class="form-control input-lg" placeholder=".input-lg">
         </div>
         <div class="col-md-3">
-          <div class="form-group">
-            <label for="select2-multiple-input-group-lg">col-md-3</label>
+          <div class="form-group has-error">
+            <label for="select2-multiple-input-group-lg" class="control-label">col-md-3</label>
             <div class="input-group input-group-lg select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="checkbox">
               </span>
               <select id="select2-multiple-input-group-lg" class="form-control select2">
-                <option></option>
                 {% include select2-select.html %}
               </select>
             </div>
@@ -224,7 +223,7 @@
       </div>
 
       <div class="page-header">
-        <h3>Button Addons <small><a href="http://getbootstrap.com/components/#input-groups-buttons">#</a> http://getbootstrap.com/components/#input-groups-buttons</small></h3>
+        <h3>Button Addons <small><a href="http://getbootstrap.com/components/#input-groups-buttons" data-toggle="tooltip" data-placement="right" title="http://getbootstrap.com/components/#input-groups-buttons">#</a></small></h3>
       </div>
 
       <div class="row">
@@ -245,8 +244,8 @@
           </div>
         </div>
         <div class="col-md-5">
-          <label for="span_medium">col-md-5</label>
-          <select id="span_medium" class="form-control select2" multiple>
+          <label for="span_medium" class="control-label">col-md-5</label>
+          <select id="span_medium" class="form-control select2-multiple" multiple>
             {% include select2-select.html %}
           </select>
           <span class="help-block"><code>span.help-block</code> A block of help text that breaks onto a new line and may extend beyond one line.</span>
@@ -256,19 +255,38 @@
 
     {% include footer.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://ivaynberg.github.io/select2/select2-{{ page.version }}/select2.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
     <script>
+
       $('.select2').select2({ placeholder: '' });
       $('.select2-multiple').select2({ placeholder: "Select a State", closeOnSelect: false });
       $('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
-      $('.select2-remote').select2({ placeholder: 'Remote Data', data: [{id:'A', text:'A'}, {id:'B', text:'B'}, {id:'C', text:'C'} ] });
+      $('.select2-remote').select2({ placeholder: 'Remote Data', data:
+        [
+          { id:'A', text:'A' },
+          { id:'B', text:'B' },
+          { id:'C', text:'C' }
+        ]
+      });
+
+      $(".select2, .select2-multiple, .select2-allow-clear, .select2-remote").on("select2-open", function() {
+        if ( $(this).parents('[class*="has-"]').length ) {
+          var classNames = $(this).parents('[class*="has-"]')[0].className.split(/\s+/);
+          for (var i=0; i<classNames.length; ++i) {
+              if ( classNames[i].match("has-") ) {
+                $('#select2-drop').addClass( classNames[i] );
+              }
+          }
+        }
+
+      });
 
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');
       });
-    </script>
 
+    </script>
   </body>
 </html>

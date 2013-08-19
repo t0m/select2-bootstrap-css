@@ -279,6 +279,8 @@
  */
 .select2-container.select2-container-disabled .select2-choice {
   cursor: not-allowed;
+  background-color: #eeeeee;
+  border-color: #cccccc;
 }
 .select2-container.select2-container-disabled .select2-choice .select2-arrow {
   background-color: transparent;

@@ -132,9 +132,14 @@
     <option value="WV">West Virginia</option>
 </optgroup>
 			</select>
-			<select class="form-control input-sm select2" disabled="disabled">
-				<option></option>
-				<optgroup label="Alaskan/Hawaiian Time Zone">
+			<div class="form-group">
+				<div class="input-group input-group-sm select2-bootstrap-prepend">
+					<span class="input-group-addon">
+						<input type="checkbox">
+					</span>
+					<select id="select2-single-input-group-sm" class="form-control select2" disabled>
+						<option></option>
+						<optgroup label="Alaskan/Hawaiian Time Zone">
     <option value="AK">Alaska</option>
     <option value="HI">Hawaii</option>
 </optgroup>
@@ -189,7 +194,9 @@
     <option value="VT">Vermont</option><option value="VA">Virginia</option>
     <option value="WV">West Virginia</option>
 </optgroup>
-			</select>
+					</select>
+				</div>
+			</div>
 		</div>
 
 		<h1>Select2 Bootstrap CSS</h1>
@@ -199,12 +206,8 @@
 		<a href="https://raw.github.com/fk/select2-bootstrap-css/master/select2-bootstrap.css" class="btn btn-outline btn-large">Download from GitHub</a>
 
 		<ul class="jumbotron-links">
-			<li>
-				<a href="http://github.com/fk/select2-bootstrap-css">GitHub project</a>
-			</li>
-			<li>
-				<a href="http://github.com/t0m/select2-bootstrap-css">Bootstrap 2 version</a>
-			</li>
+			<li><a href="http://github.com/fk/select2-bootstrap-css">GitHub project</a></li>
+			<li><a href="http://github.com/t0m/select2-bootstrap-css">Bootstrap 2 version</a></li>
 			<li>Version&nbsp;1.2.0</li>
 		</ul>
 
@@ -241,6 +244,9 @@
 <script src="http://ivaynberg.github.io/select2/select2-3.4.2/select2.js"></script>
 <script>
 	$('.select2').select2({ placeholder: "Select a State", maximumSelectionSize: 6 });
+	$(':checkbox').on( "click", function() {
+		$('#select2-single-input-group-sm').select2("enable", this.checked );
+	});
 </script>
 
   </body>

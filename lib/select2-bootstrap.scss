@@ -26,7 +26,7 @@
 .select2-container .select2-choice,
 .select2-container-multi .select2-choices {
   font-family: $font-family-base;
-  color: $gray;
+  color: $input-color;
   border-color: $input-border;
   border-radius: $input-border-radius;
   background: none;
@@ -52,15 +52,33 @@
  */
 
 .select2-container.input-sm .select2-choice,
-.select2-container-multi.input-sm .select2-choices {
+.select2-container-multi.input-sm .select2-choices,
+.input-group-sm .select2-container .select2-choice,
+.input-group-sm .select2-container-multi .select2-choices  {
   min-height: $input-height-small;
   line-height: $input-height-small + 1px;
 }
 
 .select2-container.input-lg .select2-choice,
-.select2-container-multi.input-lg .select2-choices {
+.select2-container-multi.input-lg .select2-choices,
+.input-group-lg .select2-container .select2-choice,
+.input-group-lg .select2-container-multi .select2-choices {
   min-height: $input-height-large;
   line-height: $input-height-large + 1px;
+}
+
+.select2-container-multi.input-sm .select2-choices .select2-search-choice,
+.input-group-sm .select2-container-multi .select2-choices .select2-search-choice {
+  margin-top: 3px;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+  margin-top: 5px;
+}
+
+.select2-container-multi.input-lg .select2-choices .select2-search-choice,
+.input-group-lg .select2-container-multi .select2-choices .select2-search-choice {
+  line-height: 22px;
 }
 
 /**
@@ -96,19 +114,23 @@
   background-position: -18px 3px;
 }
 
-.select2-container.input-sm .select2-choice .select2-arrow b {
+.select2-container.input-sm .select2-choice .select2-arrow b,
+.input-group-sm .select2-container .select2-choice .select2-arrow b {
   background-position: 0 1px;
 }
 
-.select2-dropdown-open.input-sm .select2-choice .select2-arrow b {
+.select2-dropdown-open.input-sm .select2-choice .select2-arrow b,
+.input-group-sm .select2-dropdown-open .select2-choice .select2-arrow b {
   background-position: -18px 1px;
 }
 
-.select2-container.input-lg .select2-choice .select2-arrow b {
+.select2-container.input-lg .select2-choice .select2-arrow b,
+.input-group-lg .select2-container .select2-choice .select2-arrow b  {
   background-position: 0 10px;
 }
 
-.select2-dropdown-open.input-lg .select2-choice .select2-arrow b {
+.select2-dropdown-open.input-lg .select2-choice .select2-arrow b,
+.input-group-lg .select2-dropdown-open .select2-choice .select2-arrow b {
   background-position: -18px 10px;
 }
 
@@ -131,7 +153,7 @@
 }
 
 /**
- * Make Select2's active-styles - applied to .select2-container when the widget gets
+ * Make Select2's active-styles - applied to .select2-container when the widget receives focus -
  * fit Bootstrap 3's .form-element:focus appearance.
  */
 
@@ -140,6 +162,7 @@
   border-color: $input-border-focus;
   outline: none;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 }
 
 .select2-drop-active {
@@ -227,6 +250,7 @@
  */
 
 .select2-container-multi .select2-choices .select2-search-choice {
+  color: $input-color;
   background: $btn-default-bg;
   border-color: $btn-default-border;
   filter: none;

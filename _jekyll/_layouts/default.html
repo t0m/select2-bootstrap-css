@@ -125,8 +125,14 @@
       </div>
 
       <div class="row">
-        <div class="col-md-5">
-          <label for="select2-multiple-input-sm">col-md-5</label>
+        <div class="col-md-4">
+          <label for="select2-multiple-input-sm">col-md-4</label>
+          <select id="select2-multiple-input-sm" class="form-control input-sm select2" multiple>
+            {% include select2-select.html %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="select2-multiple-input-sm">col-md-3</label>
           <select id="select2-multiple-input-sm" class="form-control input-sm select2">
             {% include select2-select.html %}
           </select>
@@ -135,9 +141,9 @@
           <label for="bootstrap-input-sm">Bootstrap input</label>
           <input id="bootstrap-input-sm" class="form-control input-sm" placeholder=".input-sm">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-3">
           <div class="form-group">
-            <label for="select2-single-input-group-sm">col-md-5</label>
+            <label for="select2-single-input-group-sm">col-md-3</label>
             <div class="input-group input-group-sm select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="radio">

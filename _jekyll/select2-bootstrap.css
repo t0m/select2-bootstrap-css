@@ -179,6 +179,10 @@
 /**
  * Adjust height and line-height for .select2-search-field amd multi-select Select2 widgets.
  */
+.select2-container-multi .select2-choices .select2-search-field input {
+  margin: 0;
+}
+
 .select2-chosen,
 .select2-container .select2-choices .select2-search-field input {
   padding: 6px 12px;

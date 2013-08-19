@@ -1,6 +1,5 @@
 /**
  * Select2 Bootstrap CSS
- *
  * Compatible with Select2 3.3.2, 3.4.1, 3.4.2 and Twitter Bootstrap 3 RC2
  * MIT License
  */
@@ -304,6 +303,14 @@
   color: #333333;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+/**
+ * Address Multi Select2's choice close-button vertical alignment.
+ */
+.select2-search-choice-close {
+  margin-top: -7px;
+  top: 50%;
 }
 
 /**

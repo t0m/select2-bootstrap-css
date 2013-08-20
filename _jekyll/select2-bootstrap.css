@@ -9,38 +9,61 @@
  * are copied to the .select2-container.
  */
 .select2-container.form-control {
-  margin: 0;
-  padding: 0;
   background: transparent;
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /**
  * Adjust Select2 inputs to fit Bootstrap 3 default .form-control appearance.
  */
-.select2-search .select2-input,
+.select2-container .select2-choices .select2-search-field input,
 .select2-container .select2-choice,
 .select2-container-multi .select2-choices {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #555555;
+  background: none;
+  padding: 0;
   border-color: #cccccc;
   border-radius: 4px;
-  background: none;
+  color: #555555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: white;
   filter: none;
-  padding: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.select2-search input {
+  border-color: #cccccc;
+  border-radius: 4px;
+  color: #555555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: white;
+  filter: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.select2-container .select2-choices .select2-search-field input {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /**
  * Adjust Select2 input heights to match the Bootstrap default.
  */
 .select2-container .select2-choice,
-.select2-container-multi .select2-choices,
-.select2-container .select2-arrow {
+.select2-container-multi .select2-choices {
   min-height: 34px;
   line-height: 1.42857;
+}
+
+/**
+ * Address Multi Select2's height which - depending on how many elements have been selected -
+ * may grown higher than their initial size.
+ */
+.select2-container.select2-container-multi.form-control {
+  height: auto;
 }
 
 /**
@@ -48,8 +71,8 @@
  * @see http://getbootstrap.com/css/#forms-control-sizes
  */
 .select2-container.input-sm .select2-choice,
-.select2-container-multi.input-sm .select2-choices,
 .input-group-sm .select2-container .select2-choice,
+.select2-container-multi.input-sm .select2-choices,
 .input-group-sm .select2-container-multi .select2-choices {
   min-height: 30px;
   line-height: 1.5;
@@ -57,21 +80,47 @@
 }
 
 .select2-container.input-lg .select2-choice,
-.select2-container-multi.input-lg .select2-choices,
 .input-group-lg .select2-container .select2-choice,
+.select2-container-multi.input-lg .select2-choices,
 .input-group-lg .select2-container-multi .select2-choices {
   min-height: 45px;
   line-height: 1.33;
   border-radius: 6px;
 }
 
-.select2-container-multi.input-sm .select2-choices .select2-search-choice,
-.input-group-sm .select2-container-multi .select2-choices .select2-search-choice {
-  margin-top: 3px;
+/**
+ * Adjust height and line-height for .select2-search-field amd multi-select Select2 widgets.
+ */
+.select2-container-multi .select2-choices .select2-search-field input {
+  margin: 0;
+}
+
+.select2-chosen,
+.select2-container .select2-choices .select2-search-field input {
+  padding: 6px 12px;
+}
+
+.input-sm .select2-chosen,
+.input-group-sm .select2-chosen,
+.input-sm .select2-choices .select2-search-field input,
+.input-group-sm .select2-choices .select2-search-field input {
+  padding: 5px 10px;
+}
+
+.input-lg .select2-chosen,
+.input-group-lg .select2-chosen,
+.input-lg .select2-choices .select2-search-field input,
+.input-group-lg .select2-choices .select2-search-field input {
+  padding: 10px 16px;
 }
 
 .select2-container-multi .select2-choices .select2-search-choice {
   margin-top: 5px;
+}
+
+.select2-container-multi.input-sm .select2-choices .select2-search-choice,
+.input-group-sm .select2-container-multi .select2-choices .select2-search-choice {
+  margin-top: 3px;
 }
 
 .select2-container-multi.input-lg .select2-choices .select2-search-choice,
@@ -132,6 +181,7 @@
 
 /**
  * Address Bootstrap's validation states and change Select2's border colors and focus states.
+ * Apply .has-warning, .has-danger or .has-succes to #select2-drop to match Bootstraps' colors.
  */
 .has-warning .select2-choice,
 .has-warning .select2-choices {
@@ -144,7 +194,10 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
 }
 .has-warning.select2-drop-active {
-  border-color: #a47e3c !important;
+  border-color: #a47e3c;
+}
+.has-warning.select2-drop-active.select2-drop-above {
+  border-top-color: #a47e3c;
 }
 
 .has-error .select2-choice,
@@ -158,7 +211,10 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
 }
 .has-error.select2-drop-active {
-  border-color: #953b39 !important;
+  border-color: #953b39;
+}
+.has-error.select2-drop-active.select2-drop-above {
+  border-top-color: #953b39;
 }
 
 .has-success .select2-choice,
@@ -172,33 +228,10 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
 }
 .has-success.select2-drop-active {
-  border-color: #356635 !important;
+  border-color: #356635;
 }
-
-/**
- * Adjust height and line-height for .select2-search-field amd multi-select Select2 widgets.
- */
-.select2-container-multi .select2-choices .select2-search-field input {
-  margin: 0;
-}
-
-.select2-chosen,
-.select2-container .select2-choices .select2-search-field input {
-  padding: 6px 12px;
-}
-
-.input-sm .select2-chosen,
-.input-group-sm .select2-chosen,
-.input-sm .select2-choices .select2-search-field input,
-.input-group-sm .select2-choices .select2-search-field input {
-  padding: 5px 10px;
-}
-
-.input-lg .select2-chosen,
-.input-group-lg .select2-chosen,
-.input-lg .select2-choices .select2-search-field input,
-.input-group-lg .select2-choices .select2-search-field input {
-  padding: 10px 16px;
+.has-success.select2-drop-active.select2-drop-above {
+  border-top-color: #356635;
 }
 
 /**
@@ -223,8 +256,8 @@
  * Select2 widgets in Bootstrap Input Groups
  *
  * When Select2 widgets are combined with other elements using Bootstrap 3's
- * "Input Group" component, we don't want specific edges of the Select2 container to
- * not have a border-radius.
+ * "Input Group" component, we don't want specific edges of the Select2 container
+ * to have a border-radius.
  *
  * In Bootstrap 2, input groups required a markup where these style adjustments
  * could be bound to a CSS-class identifying if the additional elements are appended,
@@ -232,7 +265,7 @@
  *
  * Bootstrap 3 doesn't rely on these classes anymore, so we have to use our own.
  * Use .select2-bootstrap-prepend and .select2-bootstrap-append on a Bootstrap 3 .input-group
- * to let the contained Select2-widget know which edges should not be rounded as they are
+ * to let the contained Select2 widget know which edges should not be rounded as they are
  * directly followed by another element.
  *
  * @see http://getbootstrap.com/components/#input-groups
@@ -262,16 +295,7 @@
  */
 .select2-results .select2-highlighted {
   color: white;
-  background-color: #357ebd;
-}
-
-/**
- * Address Multi Select2's height which - depending on how many elements have been selected -
- * may grown higher than their initial size.
- */
-.select2-container.form-control,
-.select2-container-multi {
-  height: auto;
+  background-color: #428bca;
 }
 
 /**
@@ -279,9 +303,12 @@
  * Multi Select2's height which - depending on how many elements have been selected -
  * may grown higher than their initial size.
  */
-.select2-bootstrap-append .select2-container,
+.select2-bootstrap-append .select2-container-multiple,
 .select2-bootstrap-append .input-group-btn,
-.select2-bootstrap-append .input-group-btn .btn {
+.select2-bootstrap-append .input-group-btn .btn,
+.select2-bootstrap-prepend .select2-container-multiple,
+.select2-bootstrap-prepend .input-group-btn,
+.select2-bootstrap-prepend .input-group-btn .btn {
   vertical-align: top;
 }
 
@@ -314,12 +341,12 @@
 }
 
 /**
- * Adjust the Select2's clear button position (used to reset the select box
+ * Adjust the single Select2's clear button position (used to reset the select box
  * back to the placeholder value and visible once a selection is made
  * activated by Select2's "allowClear" option).
  */
 .select2-container .select2-choice abbr {
-  top: 9px;
+  top: 50%;
 }
 
 /**

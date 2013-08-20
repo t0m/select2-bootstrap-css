@@ -55,14 +55,14 @@
     </div>
 
     <div class="form-group">
-      <label for="single-append" class="control-label">Select2 append</label>
+      <label for="single-append-text" class="control-label">Select2 append</label>
       <div class="input-group select2-bootstrap-append">
         <select id="single-append-text" class="form-control select2-allow-clear">
           <option></option>
           {% include select2-select.html %}
         </select>
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
+          <button class="btn btn-default" type="button" data-select2-open="single-append-text">
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
@@ -70,14 +70,14 @@
     </div>
 
     <div class="form-group">
-      <label for="single-prepend" class="control-label">Select2 prepend</label>
+      <label for="single-prepend-text" class="control-label">Select2 prepend</label>
       <div class="input-group select2-bootstrap-prepend">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button" data-select2-open="single-prepend">
+          <button class="btn btn-default" type="button" data-select2-open="single-prepend-text">
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
-        <select id="single-prepend" class="form-control select2">
+        <select id="single-prepend-text" class="form-control select2">
           <option></option>
           <option value="A">A</option>
           <option value="B">B</option>
@@ -132,8 +132,8 @@
           </select>
         </div>
         <div class="col-md-3">
-          <label for="select2-multiple-input-sm" class="control-label">col-md-3</label>
-          <select id="select2-multiple-input-sm" class="form-control input-sm select2-multiple">
+          <label for="select2-single-input-sm" class="control-label">col-md-3</label>
+          <select id="select2-single-input-sm" class="form-control input-sm select2-multiple">
             {% include select2-select.html %}
           </select>
         </div>
@@ -234,25 +234,25 @@
 
       <div class="row">
         <div class="col-md-7">
-          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <label for="select2-button-addons-single-input-group-sm" class="control-label">Select2 custom data load</label>
           <div class="input-group input-group-sm select2-bootstrap-prepend">
             <div class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+              <button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-sm">
                 State
               </button>
             </div>
-            <input id="remote-load" type="hidden" class="form-control select2-remote">
+            <input id="select2-button-addons-single-input-group-sm" type="hidden" class="form-control select2-remote">
           </div>
         </div>
         <div class="col-md-5">
-          <label for="select2-input-group-append" class="control-label">col-md-5</label>
+          <label for="select2-button-addons-multiple-input-group-sm" class="control-label">col-md-5</label>
           <div class="input-group input-group-sm select2-bootstrap-prepend">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
+              <button class="btn btn-default" type="button" data-select2-open="select2-button-addons-multiple-input-group-sm">
                 <span class="glyphicon glyphicon-search"></span>
               </button>
             </span>
-            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+            <select id="select2-button-addons-multiple-input-group-sm" class="form-control select2-multiple" multiple>
               {% include select2-select.html %}
             </select>
           </div>
@@ -263,7 +263,7 @@
 
       <div class="row">
         <div class="col-md-7">
-          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <label for="select2-button-addons-single-input-group" class="control-label">Select2 custom data load</label>
           <div class="input-group select2-bootstrap-prepend">
             <div class="input-group-btn">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -277,7 +277,7 @@
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
-            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+            <select id="select2-button-addons-single-input-group" class="form-control select2-multiple" multiple>
               {% include select2-select.html %}
             </select>
           </div>
@@ -301,25 +301,25 @@
 
       <div class="row">
         <div class="col-md-7">
-          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <label for="select2-button-addons-single-input-group-lg" class="control-label">Select2 custom data load</label>
           <div class="input-group input-group-lg select2-bootstrap-append">
-            <input id="remote-load" type="hidden" class="form-control select2-remote">
+            <input id="select2-button-addons-single-input-group-lg" type="hidden" class="form-control select2-remote">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+              <button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
                 <span class="glyphicon glyphicon-search"></span>
               </button>
             </span>
           </div>
         </div>
         <div class="col-md-5">
-          <label for="select2-input-group-append" class="control-label">col-md-5</label>
+          <label for="select2-button-addons-multi-input-group-lg" class="control-label">col-md-5</label>
           <div class="input-group input-group-lg select2-bootstrap-prepend">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
+              <button class="btn btn-default" type="button" data-select2-open="select2-button-addons-multi-input-group-lg">
                 <span class="glyphicon glyphicon-search"></span>
               </button>
             </span>
-            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+            <select id="select2-button-addons-multi-input-group-lg" class="form-control select2-multiple" multiple>
               {% include select2-select.html %}
             </select>
           </div>
@@ -333,12 +333,12 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="span_large" class="control-label">col-md-3</label>
+            <label for="select2-disabled-inputs-single" class="control-label">col-md-3</label>
             <div class="input-group select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="checkbox" checked>
               </span>
-              <select id="span_large" class="form-control select2">
+              <select id="select2-disabled-inputs-single" class="form-control select2">
                 <option></option>
                 {% include select2-select.html %}
               </select>
@@ -347,12 +347,12 @@
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="span_large" class="control-label">col-md-3</label>
+            <label for="select2-disabled-inputs-multiple" class="control-label">col-md-3</label>
             <div class="input-group select2-bootstrap-prepend">
               <span class="input-group-addon">
                 <input type="checkbox" checked>
               </span>
-              <select id="span_large" class="form-control select2-multiple" multiple>
+              <select id="select2-disabled-inputs-multiple" class="form-control select2-multiple" multiple>
                 <option></option>
                 {% include select2-select.html %}
               </select>

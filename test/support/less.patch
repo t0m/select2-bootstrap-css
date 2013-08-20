@@ -148,8 +148,8 @@ Index: select2-bootstrap.css
    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
  }
 -
- .select2-container.select2-container-disabled .select2-choice div,
- .select2-dropdown-open .select2-choice .select2-arrow {
+ .select2-dropdown-open .select2-choice .select2-arrow,
+ .select2-dropdown-open .select2-choice div {
    border-left-color: transparent;
    background: none;
    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);

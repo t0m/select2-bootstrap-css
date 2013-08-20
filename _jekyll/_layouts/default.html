@@ -385,7 +385,30 @@
         ]
       });
 
-      $(".select2, .select2-multiple, .select2-allow-clear, .select2-remote").on("select2-open", function() {
+      $('button[data-select2-open]').click(function(){
+        $('#' + $(this).data('select2-open')).select2('open');
+      });
+
+      {% if page.version == "3.3.2" %}
+        var select2OpenEventName = "open";
+
+        $(':checkbox').on( "click", function() {
+          if ( this.checked ) {
+            var toggleState = "enable";
+          } else {
+            var toggleState = "disable";
+          }
+          $(this).parent().nextAll('select').select2( toggleState );
+        });
+      {% else %}
+        var select2OpenEventName = "select2-open";
+
+        $(':checkbox').on( "click", function() {
+          $(this).parent().nextAll('select').select2("enable", this.checked );
+        });
+      {% endif %}
+
+      $(".select2, .select2-multiple, .select2-allow-clear, .select2-remote").on( select2OpenEventName, function() {
         if ( $(this).parents('[class*="has-"]').length ) {
           var classNames = $(this).parents('[class*="has-"]')[0].className.split(/\s+/);
           for (var i=0; i<classNames.length; ++i) {
@@ -395,14 +418,6 @@
           }
         }
 
-      });
-
-      $('button[data-select2-open]').click(function(){
-        $('#' + $(this).data('select2-open')).select2('open');
-      });
-
-      $(':checkbox').on( "click", function() {
-        $(this).parent().nextAll('select').select2("enable", this.checked );
       });
 
     </script>

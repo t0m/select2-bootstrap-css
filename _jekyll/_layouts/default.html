@@ -108,7 +108,7 @@
       <div class="input-group select2-bootstrap-prepend">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" data-select2-open="multi-prepend">
-            Tags
+            State
           </button>
         </span>
         <select id="multi-prepend" class="form-control select2" multiple>
@@ -202,7 +202,7 @@
           </select>
         </div>
         <div class="col-md-3">
-          <label for="span-small" class="control-label">col-md-5</label>
+          <label for="span-small" class="control-label">col-md-3</label>
           <select id="span-small" class="form-control input-lg select2-multiple">
             {% include select2-select.html %}
           </select>
@@ -234,10 +234,10 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
+          <div class="input-group input-group-sm select2-bootstrap-append select2-bootstrap-prepend">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                Tags
+                State
               </button>
             </span>
             <input id="remote-load" type="hidden" class="form-control select2-remote">
@@ -249,11 +249,87 @@
           </div>
         </div>
         <div class="col-md-5">
-          <label for="span_medium" class="control-label">col-md-5</label>
-          <select id="span_medium" class="form-control select2-multiple" multiple>
-            {% include select2-select.html %}
-          </select>
-          <span class="help-block"><code>span.help-block</code> A block of help text that breaks onto a new line and may extend beyond one line.</span>
+          <label for="select2-input-group-append" class="control-label">col-md-5</label>
+          <div class="input-group input-group-sm select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+              {% include select2-select.html %}
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-7">
+          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                State
+              </button>
+            </span>
+            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+              {% include select2-select.html %}
+            </select>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="select2-input-group-append" class="control-label">col-md-5</label>
+          <div class="input-group select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+              {% include select2-select.html %}
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-7">
+          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <div class="input-group input-group-lg select2-bootstrap-append select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                State
+              </button>
+            </span>
+            <input id="remote-load" type="hidden" class="form-control select2-remote">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="select2-input-group-append" class="control-label">col-md-5</label>
+          <div class="input-group input-group-lg select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="select2-input-group-append">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+            <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
+              {% include select2-select.html %}
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -269,7 +345,10 @@
 
       $('.select2, .select2-multiple').select2({ placeholder: placeholder });
       $('.select2-allow-clear').select2({ allowClear: true, placeholder: placeholder });
-      $('.select2-remote').select2({ placeholder: placeholder, data:
+      $('.select2-remote').select2({
+        placeholder: placeholder,
+        allowClear: true,
+        data:
         [
           { id:'A', text:'A' },
           { id:'B', text:'B' },

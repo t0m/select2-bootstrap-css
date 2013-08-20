@@ -1,3 +1,8 @@
+copy_docs_assets:
+	cp components/bootstrap/dist/css/bootstrap.min.css _jekyll/css/bootstrap.min.css
+	cp components/respond/respond.min.js _jekyll/js/respond.min.js
+	cp -r components/bootstrap/dist/fonts _jekyll/fonts
+
 serve_docs:
 	jekyll serve --watch -s _jekyll/ -d docs/
 

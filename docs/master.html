@@ -1,13 +1,16 @@
 <!doctype html>
 <html class="demo">
   <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>select2-bootstrap-css</title>
   <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-master/select2.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="select2-bootstrap.css">
-  <link rel="stylesheet" href="gh-pages.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/select2-bootstrap.css">
+  <link rel="stylesheet" href="css/gh-pages.css">
   <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
   <![endif]-->
 </head>
 
@@ -1080,18 +1083,13 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group input-group-sm select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
+          <div class="input-group input-group-sm select2-bootstrap-prepend">
+            <div class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="remote-load">
                 State
               </button>
-            </span>
+            </div>
             <input id="remote-load" type="hidden" class="form-control select2-remote">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
           </div>
         </div>
         <div class="col-md-5">
@@ -1168,12 +1166,19 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                State
+          <div class="input-group select2-bootstrap-prepend">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Action <span class="caret"></span>
               </button>
-            </span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
             <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
               <optgroup label="Alaskan/Hawaiian Time Zone">
     <option value="AK">Alaska</option>
@@ -1231,11 +1236,6 @@
     <option value="WV">West Virginia</option>
 </optgroup>
             </select>
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
           </div>
         </div>
         <div class="col-md-5">
@@ -1312,12 +1312,7 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group input-group-lg select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                State
-              </button>
-            </span>
+          <div class="input-group input-group-lg select2-bootstrap-append">
             <input id="remote-load" type="hidden" class="form-control select2-remote">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="remote-load">

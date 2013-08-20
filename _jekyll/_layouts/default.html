@@ -234,18 +234,13 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group input-group-sm select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
+          <div class="input-group input-group-sm select2-bootstrap-prepend">
+            <div class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="remote-load">
                 State
               </button>
-            </span>
+            </div>
             <input id="remote-load" type="hidden" class="form-control select2-remote">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
           </div>
         </div>
         <div class="col-md-5">
@@ -268,20 +263,22 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                State
+          <div class="input-group select2-bootstrap-prepend">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Action <span class="caret"></span>
               </button>
-            </span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
             <select id="select2-input-group-append" class="form-control select2-multiple" multiple>
               {% include select2-select.html %}
             </select>
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
           </div>
         </div>
         <div class="col-md-5">
@@ -304,12 +301,7 @@
       <div class="row">
         <div class="col-md-7">
           <label for="remote-load" class="control-label">Select2 custom data load</label>
-          <div class="input-group input-group-lg select2-bootstrap-append select2-bootstrap-prepend">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" data-select2-open="remote-load">
-                State
-              </button>
-            </span>
+          <div class="input-group input-group-lg select2-bootstrap-append">
             <input id="remote-load" type="hidden" class="form-control select2-remote">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="remote-load">

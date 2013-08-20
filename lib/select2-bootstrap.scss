@@ -27,7 +27,7 @@
   color: $input-color;
   font-family: $font-family-base;
   background-color: $input-bg;
-  filter: none;
+  @include reset-filter;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
 }
 
@@ -148,14 +148,13 @@
 }
 
 /**
- * Adjust the dropdown arrow button border color for the single-select Select2 elements.
- * @todo Take care of .input-sm and .input-lg modifier classes.
+ * Adjust the single Select2's dropdown arrow button appearance.
  */
 
 .select2-container .select2-choice .select2-arrow {
   border-left: 1px solid $input-border;
   background: none;
-  filter: none;
+  @include reset-filter;
 }
 
 .select2-container .select2-choice div,
@@ -163,13 +162,12 @@
 .select2-dropdown-open .select2-choice .select2-arrow {
   border-left-color: transparent;
   background: none;
-  filter: none;
+  @include reset-filter;
 }
 
 /**
  * Adjust the dropdown arrow button icon position for the single-select Select2 elements
  * to make it line up vertically now that we increased the height of .select2-container.
- * @todo Position values should be based on $input-height-*
  */
 
 .select2-container .select2-choice .select2-arrow b {
@@ -253,6 +251,11 @@
   border-color: $input-border-focus;
 }
 
+.select2-drop-auto-width,
+.select2-drop.select2-drop-above.select2-drop-active {
+    border-top-color: $input-border-focus;
+}
+
 /**
  * Select2 widgets in Bootstrap Input Groups
  *
@@ -289,7 +292,7 @@
 }
 
 /**
- * Adjust Select2 hover and selected style to match Bootstrap 3's default dropdown styles.
+ * Adjust Select2's choices hover and selected styles to match Bootstrap 3's default dropdown styles.
  */
 
 .select2-results .select2-highlighted {
@@ -320,7 +323,7 @@
   color: $input-color;
   background: $btn-default-bg;
   border-color: $btn-default-border;
-  filter: none;
+  @include reset-filter;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -355,10 +358,12 @@
 /**
  * Adjust "no results" and "selection limit" messages to make use
  * of Bootstrap 3's default "Alert" style.
+ *
  * @see http://getbootstrap.com/components/#alerts-default
  */
 
 .select2-results .select2-no-results,
+.select2-results .select2-searching,
 .select2-results .select2-selection-limit {
   background-color: $state-warning-bg;
   color: $state-warning-text;
@@ -367,7 +372,7 @@
 /**
  * Address disabled Select2 styles.
  *
- * 1. Revert border-left inherited from Select2's CSS to prevent the arrow
+ * 1. Revert border-left:0 inherited from Select2's CSS to prevent the arrow
  *    from jumping when switching from disabled to enabled state and vice versa.
  */
 

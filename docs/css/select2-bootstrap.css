@@ -99,18 +99,23 @@
 
 /**
  * Adjust height and line-height for .select2-search-field amd multi-select Select2 widgets.
+ *
+ * 1. Class repetition to address missing .select2-chosen in Select2 < 3.3.2.
  */
 .select2-container-multi .select2-choices .select2-search-field input {
   margin: 0;
 }
 
 .select2-chosen,
+.select2-choice > span:first-child,
 .select2-container .select2-choices .select2-search-field input {
   padding: 6px 12px;
 }
 
 .input-sm .select2-chosen,
 .input-group-sm .select2-chosen,
+.input-sm .select2-choice > span:first-child,
+.input-group-sm .select2-choice > span:first-child,
 .input-sm .select2-choices .select2-search-field input,
 .input-group-sm .select2-choices .select2-search-field input {
   padding: 5px 10px;
@@ -118,6 +123,8 @@
 
 .input-lg .select2-chosen,
 .input-group-lg .select2-chosen,
+.input-lg .select2-choice > span:first-child,
+.input-group-lg .select2-choice > span:first-child,
 .input-lg .select2-choices .select2-search-field input,
 .input-group-lg .select2-choices .select2-search-field input {
   padding: 10px 16px;
@@ -141,14 +148,16 @@
 
 /**
  * Adjust the single Select2's dropdown arrow button appearance.
+ *
+ * 1. For Select2 v.3.3.2.
  */
-.select2-container .select2-choice .select2-arrow {
+.select2-container .select2-choice .select2-arrow,
+.select2-container .select2-choice div {
   border-left: 1px solid #cccccc;
   background: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.select2-container .select2-choice div,
 .select2-container.select2-container-disabled .select2-choice div,
 .select2-dropdown-open .select2-choice .select2-arrow {
   border-left-color: transparent;
@@ -159,33 +168,45 @@
 /**
  * Adjust the dropdown arrow button icon position for the single-select Select2 elements
  * to make it line up vertically now that we increased the height of .select2-container.
+ *
+ * 1. Class repetition to address missing .select2-chosen in Select2 v.3.3.2.
  */
-.select2-container .select2-choice .select2-arrow b {
+.select2-container .select2-choice .select2-arrow b,
+.select2-container .select2-choice div b {
   background-position: 0 3px;
 }
 
-.select2-dropdown-open .select2-choice .select2-arrow b {
+.select2-dropdown-open .select2-choice .select2-arrow b,
+.select2-dropdown-open .select2-choice div b {
   background-position: -18px 3px;
 }
 
 .select2-container.input-sm .select2-choice .select2-arrow b,
-.input-group-sm .select2-container .select2-choice .select2-arrow b {
+.input-group-sm .select2-container .select2-choice .select2-arrow b,
+.select2-container.input-sm .select2-choice div b,
+.input-group-sm .select2-container .select2-choice div b {
   background-position: 0 1px;
 }
 
 .select2-dropdown-open.input-sm .select2-choice .select2-arrow b,
-.input-group-sm .select2-dropdown-open .select2-choice .select2-arrow b {
+.input-group-sm .select2-dropdown-open .select2-choice .select2-arrow b,
+.select2-dropdown-open.input-sm .select2-choice div b,
+.input-group-sm .select2-dropdown-open .select2-choice div b {
   background-position: -18px 1px;
 }
 
 .select2-container.input-lg .select2-choice .select2-arrow b,
-.input-group-lg .select2-container .select2-choice .select2-arrow b {
-  background-position: 0 10px;
+.input-group-lg .select2-container .select2-choice .select2-arrow b,
+.select2-container.input-lg .select2-choice div b,
+.input-group-lg .select2-container .select2-choice div b {
+  background-position: 0 9px;
 }
 
 .select2-dropdown-open.input-lg .select2-choice .select2-arrow b,
-.input-group-lg .select2-dropdown-open .select2-choice .select2-arrow b {
-  background-position: -18px 10px;
+.input-group-lg .select2-dropdown-open .select2-choice .select2-arrow b,
+.select2-dropdown-open.input-lg .select2-choice div b,
+.input-group-lg .select2-dropdown-open .select2-choice div b {
+  background-position: -18px 9px;
 }
 
 /**
@@ -205,7 +226,7 @@
 .has-warning.select2-drop-active {
   border-color: #a47e3c;
 }
-.has-warning.select2-drop-active.select2-drop-above {
+.has-warning.select2-drop-active.select2-drop.select2-drop-above {
   border-top-color: #a47e3c;
 }
 
@@ -222,7 +243,7 @@
 .has-error.select2-drop-active {
   border-color: #953b39;
 }
-.has-error.select2-drop-active.select2-drop-above {
+.has-error.select2-drop-active.select2-drop.select2-drop-above {
   border-top-color: #953b39;
 }
 
@@ -239,7 +260,7 @@
 .has-success.select2-drop-active {
   border-color: #356635;
 }
-.has-success.select2-drop-active.select2-drop-above {
+.has-success.select2-drop-active.select2-drop.select2-drop-above {
   border-top-color: #356635;
 }
 
@@ -379,7 +400,8 @@
 /**
  * Address disabled Select2 styles.
  *
- * 1. Revert border-left:0 inherited from Select2's CSS to prevent the arrow
+ * 1. For Select2 v.3.3.2.
+ * 2. Revert border-left:0 inherited from Select2's CSS to prevent the arrow
  *    from jumping when switching from disabled to enabled state and vice versa.
  */
 .select2-container.select2-container-disabled .select2-choice,
@@ -389,8 +411,10 @@
   border-color: #cccccc;
 }
 .select2-container.select2-container-disabled .select2-choice .select2-arrow,
-.select2-container.select2-container-disabled .select2-choices .select2-arrow {
+.select2-container.select2-container-disabled .select2-choice div,
+.select2-container.select2-container-disabled .select2-choices .select2-arrow,
+.select2-container.select2-container-disabled .select2-choices div {
   background-color: transparent;
   border-left: 1px solid transparent;
-  /* 1 */
+  /* 2 */
 }

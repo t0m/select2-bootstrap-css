@@ -3,8 +3,7 @@
   <head>
   <title>select2-bootstrap-css</title>
   <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-3.4.2/select2.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="select2-bootstrap.css">
   <link rel="stylesheet" href="gh-pages.css">
   <!--[if lt IE 9]>
@@ -13,7 +12,7 @@
 </head>
 
   <body>
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -1166,13 +1165,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://ivaynberg.github.io/select2/select2-3.4.2/select2.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script>
 
-      $('.select2').select2({ placeholder: '' });
-      $('.select2-multiple').select2({ placeholder: "Select a State", closeOnSelect: false });
-      $('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
-      $('.select2-remote').select2({ placeholder: 'Remote Data', data:
+      var placeholder = "Select a State";
+
+      $('.select2, .select2-multiple').select2({ placeholder: placeholder });
+      $('.select2-allow-clear').select2({ allowClear: true, placeholder: placeholder });
+      $('.select2-remote').select2({ placeholder: placeholder, data:
         [
           { id:'A', text:'A' },
           { id:'B', text:'B' },

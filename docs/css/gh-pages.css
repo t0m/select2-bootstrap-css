@@ -22,7 +22,9 @@ a:focus {
   color: #999;
   color: rgba(0,0,0,.35);
   text-align: center;
-  background-color: #f8f8f8;
+  background: #f8f8f8;
+  background: -webkit-linear-gradient(-81deg, #f8f8f8 10%, #fafafa 56%, #ffffff 85%);
+  background: linear-gradient(171deg, #f8f8f8 10%, #fafafa 56%, #ffffff 85%);
   border-radius: 0;
   font-weight: normal;
 }

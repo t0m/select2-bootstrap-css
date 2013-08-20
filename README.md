@@ -9,7 +9,7 @@ Known issues:
 
  * IE8/IE9/IE10, Firefox: Select2 in "Bootstrap input group with radio/checkbox addon" and .input-lg misses 1px in height (IE9/IE10, Firefox behave the same for Bootstrap 3's "input group sizing"-demo at http://getbootstrap.com/components/#input-groups-sizing)
  * IE9/IE10: Select2 in "Bootstrap input group with button addon" (no height modifier, i. e. .input-sm, .input-lg) also misses 1px in height (bug _not_ inherited from Bootstrap 3)
- * focus and box-shadow for .select2-search input do not fit Bootstrap's defaults
+ * box-shadow for .select2-search input do not fit Bootstrap's defaults
  * the Select2 dropdown could inherit look-and-feel from Bootstrap dropdowns and/or could honor Bootstrap height sizing classes
  * border-radii for opened Select2 dropdowns could consistently be set to be … round ;-)
  * checkboxes and radio-buttons in "Bootstrap input groups" could be vertically aligned to the top (instead of center) if combined with a multi Select2 to address variable height of the Select2 container

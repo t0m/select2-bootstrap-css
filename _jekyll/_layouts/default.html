@@ -12,6 +12,7 @@
     <div class="form-group">
       <label for="single" class="control-label">Select2 single select</label>
       <select id="single" class="form-control select2">
+        <option></option>
         {% include select2-select.html %}
       </select>
     </div>
@@ -19,7 +20,6 @@
     <div class="form-group">
       <label for="multiple" class="control-label">Select2 multi select</label>
       <select id="multiple" class="form-control select2-multiple" multiple>
-        <option></option>
         {% include select2-select.html %}
       </select>
     </div>
@@ -157,6 +157,8 @@
         </div>
       </div>
 
+      <hr>
+
       <div class="row">
         <div class="col-md-4 has-warning">
           <label for="select2-multiple" class="control-label">col-md-4</label>
@@ -181,7 +183,7 @@
               <span class="input-group-addon">
                 <input type="checkbox">
               </span>
-              <select id="span_large" class="form-control select2-multiple" multiple>
+              <select id="span_large" class="form-control select2">
                 <option></option>
                 {% include select2-select.html %}
               </select>
@@ -189,6 +191,8 @@
           </div>
         </div>
       </div>
+
+      <hr>
 
       <div class="row">
         <div class="col-md-4">
@@ -215,6 +219,7 @@
                 <input type="checkbox">
               </span>
               <select id="select2-multiple-input-group-lg" class="form-control select2">
+                <option></option>
                 {% include select2-select.html %}
               </select>
             </div>

@@ -1,7 +1,7 @@
 CSS for making Select2 fit in with Bootstrap a bit better,  
 **updated for Bootstrap v3.0.0**.
 
-http://fk.github.io/select2-bootstrap-css/ – no LESS for now.
+http://fk.github.io/select2-bootstrap-css/
 
 Tested with Bootstrap 3.0.0 and Select2 3.3.2, 3.4.1 and 3.4.2.
 

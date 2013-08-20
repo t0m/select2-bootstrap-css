@@ -53,7 +53,7 @@
  */
 
 .select2-container .select2-choice {
-  min-height: $input-height-base;
+  height: $input-height-base;
   line-height: $line-height-base;
 }
 
@@ -73,14 +73,14 @@
 
 .select2-container.input-sm .select2-choice,
 .input-group-sm .select2-container .select2-choice {
-  min-height: $input-height-small;
+  height: $input-height-small;
   line-height: $line-height-small;
   border-radius: $border-radius-small;
 }
 
 .select2-container.input-lg .select2-choice,
 .input-group-lg .select2-container .select2-choice {
-  min-height: $input-height-large;
+  height: $input-height-large;
   line-height: $line-height-large;
   border-radius: $border-radius-large;
 }
@@ -148,7 +148,7 @@
 
 .select2-container-multi.input-lg .select2-choices .select2-search-choice,
 .input-group-lg .select2-container-multi .select2-choices .select2-search-choice {
-  line-height: 22px;
+  line-height: 24px;
 }
 
 /**

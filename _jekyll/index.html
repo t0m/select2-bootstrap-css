@@ -58,6 +58,6 @@ version: 3.4.2
 <script>
 	$('.select2').select2({ placeholder: "Select a State", maximumSelectionSize: 6 });
 	$(':checkbox').on( "click", function() {
-		$('#select2-single-input-group-sm').select2("enable", this.checked );
+		$(this).parent().nextAll('select').select2("enable", this.checked );
 	});
 </script>

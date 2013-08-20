@@ -32,7 +32,7 @@
       <label for="select2-single-append" class="control-label">Select2 append Checkbox</label>
       <div class="input-group select2-bootstrap-prepend">
         <span class="input-group-addon">
-          <input type="checkbox">
+          <input type="checkbox" checked>
         </span>
         <select id="select2-single-append" class="form-control select2-allow-clear">
           <option></option>
@@ -181,7 +181,7 @@
             <label for="span_large" class="control-label">col-md-3</label>
             <div class="input-group select2-bootstrap-prepend">
               <span class="input-group-addon">
-                <input type="checkbox">
+                <input type="checkbox" checked>
               </span>
               <select id="span_large" class="form-control select2">
                 <option></option>
@@ -216,7 +216,7 @@
             <label for="select2-multiple-input-group-lg" class="control-label">col-md-3</label>
             <div class="input-group input-group-lg select2-bootstrap-prepend">
               <span class="input-group-addon">
-                <input type="checkbox">
+                <input type="radio">
               </span>
               <select id="select2-multiple-input-group-lg" class="form-control select2">
                 <option></option>
@@ -362,6 +362,10 @@
 
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');
+      });
+
+      $(':checkbox').on( "click", function() {
+        $(this).parent().nextAll('select').select2("enable", this.checked );
       });
 
     </script>

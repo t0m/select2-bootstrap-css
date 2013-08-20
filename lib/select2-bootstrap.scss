@@ -369,7 +369,8 @@
  */
 
 .select2-container.select2-container-disabled {
-  .select2-choice {
+  .select2-choice,
+  .select2-choices {
     cursor: not-allowed;
     background-color: $input-bg-disabled;
     border-color: $input-border;

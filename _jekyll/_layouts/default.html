@@ -324,6 +324,42 @@
           </div>
         </div>
       </div>
+
+      <div class="page-header">
+        <h3>Disabled inputs <small><a href="http://getbootstrap.com/css/#forms-control-states">#</a></small></h3>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="span_large" class="control-label">col-md-3</label>
+            <div class="input-group select2-bootstrap-prepend">
+              <span class="input-group-addon">
+                <input type="checkbox" checked>
+              </span>
+              <select id="span_large" class="form-control select2">
+                <option></option>
+                {% include select2-select.html %}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="span_large" class="control-label">col-md-3</label>
+            <div class="input-group select2-bootstrap-prepend">
+              <span class="input-group-addon">
+                <input type="checkbox" checked>
+              </span>
+              <select id="span_large" class="form-control select2-multiple" multiple>
+                <option></option>
+                {% include select2-select.html %}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     {% include footer.html %}

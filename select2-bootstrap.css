@@ -377,6 +377,9 @@
 
 /**
  * Address disabled Select2 styles.
+ *
+ * 1. Revert border-left inherited from Select2's CSS to prevent the arrow
+ *    from jumping when switching from disabled to enabled state and vice versa.
  */
 .select2-container.select2-container-disabled .select2-choice,
 .select2-container.select2-container-disabled .select2-choices {
@@ -387,4 +390,6 @@
 .select2-container.select2-container-disabled .select2-choice .select2-arrow,
 .select2-container.select2-container-disabled .select2-choices .select2-arrow {
   background-color: transparent;
+  border-left: 1px solid transparent;
+  /* 1 */
 }

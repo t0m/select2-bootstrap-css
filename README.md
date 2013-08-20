@@ -3,7 +3,7 @@ CSS for making Select2 fit in with Bootstrap a bit better,
 
 http://fk.github.io/select2-bootstrap-css/
 
-Tested with Bootstrap 3.0.0 and Select2 3.3.2, 3.4.1 and 3.4.2 and in latest Chrome, Firefox, Opera (Mac) and IE8-IE10.
+Tested with Bootstrap 3.0.0 and Select2 3.3.2, 3.4.1 and 3.4.2 and in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 Known issues:
 

@@ -83,22 +83,18 @@
   border-radius: 6px;
 }
 
-.select2-container-multi .select2-choices .select2-search-field input,
 .select2-container-multi .select2-choices .select2-search-field input {
-  min-height: 32px;
-  line-height: 1.42857;
+  height: 32px;
 }
 
 .select2-container-multi.input-sm .select2-choices .select2-search-field input,
 .input-group-sm .select2-container-multi .select2-choices .select2-search-field input {
-  min-height: 28px;
-  line-height: 1.5;
+  height: 28px;
 }
 
 .select2-container-multi.input-lg .select2-choices .select2-search-field input,
 .input-group-lg .select2-container-multi .select2-choices .select2-search-field input {
-  min-height: 43px;
-  line-height: 1.33;
+  height: 43px;
 }
 
 /**

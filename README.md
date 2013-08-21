@@ -13,4 +13,3 @@ Known issues:
  * the Select2 dropdown could inherit look-and-feel from Bootstrap dropdowns and/or could honor Bootstrap height sizing classes
  * border-radii for opened Select2 dropdowns could consistently be set to be … round ;-)
  * checkboxes and radio-buttons in "Bootstrap input groups" could be vertically aligned to the top (instead of center) if combined with a multi Select2 to address variable height of the Select2 container
- * lack of documentation for "Bootstrap Input Group" helper-classes `.select2-bootstrap-prepend` and `.select2-bootstrap-append`

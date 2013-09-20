@@ -18,6 +18,5 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.rubyforge_project = '[none]'
 
-  s.add_dependency 'json'
   s.add_development_dependency 'jekyll'
 end

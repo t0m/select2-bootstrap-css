@@ -1,11 +1,20 @@
 .demo {
-	padding: 80px 30px 30px;
+  padding: 80px 30px 30px;
 }
 
 .demo .footer {
   padding-top: 40px;
   margin-top: 40px;
   border-top: 1px solid #eee;
+}
+
+.home {
+  background: #f8f8f8;
+}
+
+.home .footer,
+.home body {
+  background: transparent;
 }
 
 .home .container {
@@ -34,6 +43,8 @@ a:focus {
   margin-bottom: 15px;
   letter-spacing: -1px;
   color: #999;
+  font-weight: 300;
+  margin-top: 60px;
 }
 
 .jumbotron h2 {
@@ -60,11 +71,17 @@ a:focus {
   border-color: #333;
 }
 
+.jumbotron p a:hover {
+  border-color: #000;
+  border-width: 2px;
+}
+
 .jumbotron p a,
 .jumbotron-links a {
   font-weight: 500;
   color: #000;
   transition: all .1s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
 
 .jumbotron-links {
@@ -82,8 +99,8 @@ a:focus {
 }
 
 .jumbotron hr {
-	border-color: #ddd;
-	width: 100px;
+  border-color: #ddd;
+  width: 100px;
 }
 
 .jumbotron .select2-wrapper {

@@ -8,11 +8,16 @@
  * Reset Bootstrap 3 .form-control styles which - if applied to the
  * original <select>-element the Select2-plugin may be run against -
  * are copied to the .select2-container.
+ *
+ * 1. Overwrite .select2-container's original display:inline-block
+ *    with Bootstrap 3's default for .form-control, display:block;
+ *    courtesy of @juristr (@see https://github.com/fk/select2-bootstrap-css/pull/1)
  */
 
 .select2-container.form-control {
   background: transparent;
   border: none;
+  display: block; /* 1 */
   margin: 0;
   padding: 0;
 }

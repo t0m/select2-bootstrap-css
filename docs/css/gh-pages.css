@@ -103,29 +103,19 @@ a:focus {
   width: 100px;
 }
 
-.jumbotron .select2-wrapper {
-  font-size: 14px;
-  padding: 8px;
-  border-radius: 4px;
-  display: block;
-  width: 320px;
+.jumbotron .select2-demos {
+  width: 300px;
   margin: 0 auto;
   text-align: left;
 }
 
 .jumbotron .form-group {
   background: none;
-  margin-bottom: 0;
 }
 
 .jumbotron .select2-wrapper {
-  margin-bottom: 20px;
-  transition: all .1s ease-in-out;
-}
-
-.jumbotron select,
-.jumbotron .select2-container {
   margin-bottom: 16px;
+  transition: all .1s ease-in-out;
 }
 
 .btn-large {
@@ -146,7 +136,7 @@ a:focus {
     padding-bottom: 100px;
     font-size: 21px;
   }
-  .jumbotron .select2-wrapper {
+  .jumbotron .select2-demos {
     margin-bottom: 40px;
   }
   .jumbotron h1 {

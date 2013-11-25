@@ -9,6 +9,7 @@
  * are copied to the .select2-container.
  */
 .select2-container.form-control {
+  display: block;
   background: transparent;
   border: none;
   margin: 0;

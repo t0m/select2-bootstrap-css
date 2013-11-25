@@ -349,7 +349,7 @@ Index: select2-bootstrap.css
   * Address disabled Select2 styles.
   *
   * 1. For Select2 v.3.3.2.
-@@ -410,11 +367,12 @@
+@@ -410,16 +367,16 @@
    background-color: #eeeeee;
    border-color: #cccccc;
  }
@@ -361,5 +361,20 @@ Index: select2-bootstrap.css
    background-color: transparent;
    border-left: 1px solid transparent;
    /* 2 */
++
+ }
+-
+ /**
+  * Address Select2's loading indicator position - which should not stick
+  * to the right edge of Select2's search input.
+  *
+@@ -444,7 +401,9 @@
+ .select2-container-multi .select2-choices .select2-search-field input.select2-active,
+ .select2-more-results.select2-active {
+   background-position: 99%;
+   /* 4 */
++
+   background-position: right 4px center;
+   /* 5 */
 +
  }

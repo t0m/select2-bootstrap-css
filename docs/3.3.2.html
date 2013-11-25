@@ -1516,13 +1516,16 @@
               data: function (term, page) {
                   return {
                       q: term, // search term
-                      page_limit: 10,
+                      page_limit: 10, // page size
+                      page: page, // page number
                       apikey: "w2uyd7u9mj53nhq2f8mpzquq" // please do not use so this example keeps working
                   };
               },
-              results: function (data, page) { // parse the results into the format expected by Select2.
-                  // since we are using custom formatting functions we do not need to alter remote JSON data
-                  return {results: data.movies};
+              results: function (data, page) {
+                  var more = (page * 10) < data.total; // whether or not there are more results available
+
+                  // notice we return the value of more so Select2 knows if more results can be loaded
+                  return {results: data.movies, more: more};
               }
           },
           initSelection: function(element, callback) {

@@ -128,6 +128,13 @@ a:focus {
   margin-bottom: 16px;
 }
 
+.btn-large {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
 .footer {
   text-align: center;
   color: #999;
@@ -144,5 +151,10 @@ a:focus {
   }
   .jumbotron h1 {
     font-size: 50px;
+  }
+  .btn-large {
+    margin: 20px 5px 20px 0;
+    padding: 18px 24px;
+    font-size: 21px;
   }
 }

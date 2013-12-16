@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="demo">
+  {% include head.html %}
+  <body>
+    {% include navbar.html %}
+
+    <div class="form-group">
+      <label for="default" class="control-label">Default textbox</label>
+      <input id="default" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="single" class="control-label">Select2 single select</label>
+      <select id="single" class="form-control select2">
+        {% include select2-select.html %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="multiple" class="control-label">Select2 multi select</label>
+      <select id="multiple" class="form-control select2-multi" multiple="multiple">
+        <option></option>
+        {% include select2-select.html %}
+      </select>
+    </div>
+
+    <div class="page-header">
+      <h2>Input Groups</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="single-append" class="control-label">Select2 append Checkbox</label>
+      <div class="input-group select2-bootstrap-prepend">
+        <span class="input-group-addon">
+          <input type="checkbox">
+        </span>
+        <select id="single-append" class="form-control select2-allow-clear">
+          <option></option>
+          {% include select2-select.html %}
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="single-append-radio" class="control-label">Select2 multi append Radiobutton</label>
+      <div class="input-group select2-bootstrap-prepend">
+        <span class="input-group-addon">
+          <input type="radio">
+        </span>
+        <select id="single-append-radio" class="form-control select2-allow-clear" multiple="multiple">
+          <option></option>
+          {% include select2-select.html %}
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="single-append" class="control-label">Select2 append</label>
+      <div class="input-group select2-bootstrap-append">
+        <select id="single-append-text" class="form-control select2-allow-clear">
+          <option></option>
+          {% include select2-select.html %}
+        </select>
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="single-prepend" class="control-label">Select2 prepend</label>
+      <div class="input-group select2-bootstrap-prepend">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" data-select2-open="single-prepend">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+        <select id="single-prepend" class="form-control select2">
+          <option></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="multi-append" class="control-label">Select2 multi append</label>
+      <div class="input-group select2-bootstrap-append">
+        <select id="multi-append" class="form-control select2" multiple="multiple">
+          <option></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" data-select2-open="multi-append">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="multi-prepend" class="control-label">Select2 multi prepend</label>
+      <div class="input-group select2-bootstrap-prepend">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" data-select2-open="multi-prepend">
+            Tags
+          </button>
+        </span>
+        <select id="multi-prepend" class="form-control select2" multiple="multiple" style="width:100%;">
+          <option></option>
+            {% include select2-select.html %}
+        </select>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header">
+        <h2>Grid</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label for="span_small">col-md-2</label>
+          <select id="span_small" class="form-control select2">
+            {% include select2-select.html %}
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label for="span_medium">Bootstrap input</label>
+          <input id="span_medium" class="form-control" placeholder=".col-md-5">
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="span_large">col-md-6</label>
+            <div class="input-group select2-bootstrap-prepend">
+              <span class="input-group-addon">
+                <input type="checkbox">
+              </span>
+              <select id="span_large" class="form-control select2">
+                <option></option>
+                {% include select2-select.html %}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <label for="remote-load" class="control-label">Select2 custom data load</label>
+          <div class="input-group select2-bootstrap-append select2-bootstrap-prepend">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                Tags
+              </button>
+            </span>
+            <input id="remote-load" type="hidden" class="form-control select2-remote">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" data-select2-open="remote-load">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="span_medium">col-md-5</label>
+          <select id="span_medium" class="form-control select2" multiple="multiple">
+            {% include select2-select.html %}
+          </select>
+          <span class="help-block"><code>span.help-block</code> A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ivaynberg.github.io/select2/select2-{{ page.version }}/select2.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+    <script>
+      $('.select2').select2({ placeholder: '' });
+      $('.select2-multi').select2({ placeholder: "Select a State", closeOnSelect: false });
+      $('.select2-allow-clear').select2({ allowClear: true, placeholder: "Select a State" });
+      $('.select2-remote').select2({ placeholder: 'Remote Data', data: [{id:'A', text:'A'}, {id:'B', text:'B'}, {id:'C', text:'C'} ] });
+
+      $('button[data-select2-open]').click(function(){
+        $('#' + $(this).data('select2-open')).select2('open');
+      });
+    </script>
+
+  </body>
+</html>

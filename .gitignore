@@ -6,3 +6,4 @@ gh-pages
 tmp
 Gemfile.lock
 .ruby-version
+_site

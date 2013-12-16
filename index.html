@@ -1,0 +1,67 @@
+---
+layout: minimal
+version: 3.4.2
+---
+<div class="jumbotron">
+	<div class="container">
+		<div class="select2-wrapper">
+			<div class="input-groupdd select2-bootstrap-append" id="multi-select2">
+				<div id="single-select">
+					<select id="multiple" class="form-control select2-multi" multiple="multiple">
+					<option></option>
+					{% include select2-select.html %}
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<h1>Select2 Bootstrap CSS</h1>
+
+		<p>Simple CSS to make <a href="http://ivaynberg.github.io/select2/">Select2</a> fit in with <a href="http://getbootstrap.com/">Bootstrap</a>, ready for use in CSS, LESS, Sass and Compass flavors.</p>
+
+		<a href="https://raw.github.com/fk/select2-bootstrap-css/master/select2-bootstrap.css" class="btn btn-outline btn-large">Download from GitHub</a>
+
+		<ul class="jumbotron-links">
+			<li>
+				<a href="http://github.com/fk/select2-bootstrap-css">GitHub project</a>
+			</li>
+			<li>
+				<a href="http://github.com/t0m/select2-bootstrap-css">Bootstrap 2 version</a>
+			</li>
+			<li>
+				<a href="http://ivaynberg.github.io/select2/">Select2</a>
+			</li>
+			<li>
+				<a href="http://getbootstrap.com">Bootstrap</a>
+			</li>
+			<li>Version&nbsp;1.2.0</li>
+		</ul>
+
+		<hr>
+
+		<h2>Demos</h2>
+
+		<ul class="jumbotron-links">
+			{% for version in site.versions %}
+				<li><a href="{{ version }}.html">Select2 {{ version }}</a></li>
+			{% endfor %}
+		</ul>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<p>
+			<a href="http://getbootstrap.com">Bootstrap</a> is a front-end framework for fast, sleek, and mobile-first web development.<br>
+			<a href="http://select2.com">Select2</a> is a jQuery based replacement for select boxes.
+		</p>
+		<p><a href="https://twitter.com/tterrace">&lt;3 @tterrace</a></p>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ivaynberg.github.io/select2/select2-3.4.2/select2.js"></script>
+<script>
+	$('.select2-multi').select2({ placeholder: "Select a State", maximumSelectionSize: 10, closeOnSelect: false });
+</script>

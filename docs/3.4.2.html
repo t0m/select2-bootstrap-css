@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>select2-bootstrap-css</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-3.3.2/select2.css">
+  <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-3.4.2/select2.css">
   <link rel="stylesheet" href="css/select2-bootstrap.css">
   <link rel="stylesheet" href="css/gh-pages.css">
   <!--[if lt IE 9]>
@@ -31,11 +31,11 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       
-        <li class="active"><a href="3.3.2.html">3.3.2</a></li>
+        <li class=""><a href="3.3.2.html">3.3.2</a></li>
       
         <li class=""><a href="3.4.1.html">3.4.1</a></li>
       
-        <li class=""><a href="3.4.2.html">3.4.2</a></li>
+        <li class="active"><a href="3.4.2.html">3.4.2</a></li>
       
         <li class=""><a href="3.4.3.html">3.4.3</a></li>
       
@@ -1499,7 +1499,7 @@
 </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://ivaynberg.github.io/select2/select2-3.3.2/select2.js"></script>
+    <script src="http://ivaynberg.github.io/select2/select2-3.4.2/select2.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script>
 
@@ -1573,15 +1573,10 @@
       });
 
       
-        var select2OpenEventName = "open";
+        var select2OpenEventName = "select2-open";
 
         $(':checkbox').on( "click", function() {
-          if ( this.checked ) {
-            var toggleState = "enable";
-          } else {
-            var toggleState = "disable";
-          }
-          $(this).parent().nextAll('select').select2( toggleState );
+          $(this).parent().nextAll('select').select2("enable", this.checked );
         });
       
 

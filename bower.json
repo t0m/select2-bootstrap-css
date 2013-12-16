@@ -1,13 +1,14 @@
 {
   "name": "select2-bootstrap-css",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
   ],
   "devDependencies": {
-    "bootstrap": "~2.3.1",
-    "sass-bootstrap": "git://github.com/jlong/sass-twitter-bootstrap.git#~2.3.1"
+    "bootstrap": "3.0.0",
+    "sass-bootstrap": "git://github.com/jlong/sass-twitter-bootstrap.git#a74363ec86353cff4e51559941be8f1da511be55",
+    "respond": "~1.2.0"
   }
 }

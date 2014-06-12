@@ -1,6 +1,9 @@
 {
   "name": "select2-bootstrap-css",
   "version": "1.2.3",
+  "main": [
+    "select2-bootstrap.css"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",

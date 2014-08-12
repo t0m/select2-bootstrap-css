@@ -148,3 +148,51 @@ a:focus {
     font-size: 21px;
   }
 }
+
+.select2-result-repository__avatar {
+  float: left;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.select2-result-repository__avatar img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.select2-result-repository__meta {
+  margin-bottom: 0.5em;
+  margin-left: 70px;
+}
+
+.select2-result-repository__title {
+  color: black;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.1;
+}
+
+.select2-result-repository__forks {
+  margin-right: 1em;
+}
+
+.select2-result-repository__forks,
+.select2-result-repository__stargazers {
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.select2-result-repository__description {
+  font-size: 13px;
+  color: #777;
+}
+
+.select2-highlighted .select2-result-repository__forks,
+.select2-highlighted .select2-result-repository__stargazers,
+.select2-highlighted .select2-result-repository__title,
+.select2-highlighted .select2-result-repository__description {
+  color: white;
+}

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>select2-bootstrap-css</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://ivaynberg.github.io/select2/select2-3.4.4/select2.css">
+  <link rel="stylesheet" href="//ivaynberg.github.io/select2/select2-3.4.4/select2.css">
   <link rel="stylesheet" href="css/select2-bootstrap.css">
   <link rel="stylesheet" href="css/gh-pages.css">
   <!--[if lt IE 9]>
@@ -1266,7 +1266,7 @@
         <div class="col-md-7">
           <label for="select2-button-addons-single-input-group-lg" class="control-label">Select2 custom data load</label>
           <div class="input-group input-group-lg select2-bootstrap-append">
-            <input id="select2-button-addons-single-input-group-lg" type="hidden" class="form-control select2-remote" value="13020">
+            <input id="select2-button-addons-single-input-group-lg" type="hidden" class="form-control select2-remote" value="1296269">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button" data-select2-open="select2-button-addons-single-input-group-lg">
                 <span class="glyphicon glyphicon-search"></span>
@@ -1498,8 +1498,8 @@
 	</div>
 </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://ivaynberg.github.io/select2/select2-3.4.4/select2.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ivaynberg.github.io/select2/select2-3.4.4/select2.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script>
 
@@ -1507,66 +1507,65 @@
 
       $('.select2, .select2-multiple').select2({ placeholder: placeholder });
       $('.select2-allow-clear').select2({ allowClear: true, placeholder: placeholder });
+
+      // @see https://github.com/ivaynberg/select2/commit/6661e3
+      function repoFormatResult(repo) {
+        var markup = '<div class="select2-result-repository clearfix">' +
+          '<div class="select2-result-repository__avatar"><img src="' + repo.owner.avatar_url + '" /></div>' +
+          '<div class="select2-result-repository__meta">' +
+            '<div class="select2-result-repository__title">' + repo.full_name + '</div>' +
+            '<div class="select2-result-repository__statistics">' + 
+              '<div class="select2-result-repository__forks">' + repo.forks_count + ' Forks</div>' +
+              '<div class="select2-result-repository__stargazers">' + repo.stargazers_count + ' Stars</div>' +
+            '</div>';
+
+        if (repo.description) {
+           markup += '<div class="select2-result-repository__description">' + repo.description + '</div>';
+        }
+
+        markup += '</div></div>';
+
+        return markup;
+      }
+
+      function repoFormatSelection(repo) {
+        return repo.full_name;
+      }
+
       $('.select2-remote').select2({
-          placeholder: "Search for a movie",
+          placeholder: "Search for a GitHub Repository",
           minimumInputLength: 1,
           ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
-              url: "http://api.rottentomatoes.com/api/public/v1.0/movies.json",
-              dataType: 'jsonp',
+              url: "https://api.github.com/search/repositories",
+              dataType: 'json',
+              quietMillis: 250,
               data: function (term, page) {
                   return {
-                      q: term, // search term
-                      page_limit: 10, // page size
-                      page: page, // page number
-                      apikey: "w2uyd7u9mj53nhq2f8mpzquq" // please do not use so this example keeps working
+                      q: term // search term
                   };
               },
-              results: function (data, page) {
-                  var more = (page * 10) < data.total; // whether or not there are more results available
-
-                  // notice we return the value of more so Select2 knows if more results can be loaded
-                  return {results: data.movies, more: more};
-              }
+              results: function (data, page) { // parse the results into the format expected by Select2.
+                  // since we are using custom formatting functions we do not need to alter the remote JSON data
+                  return { results: data.items };
+              },
+              cache: true
           },
           initSelection: function(element, callback) {
-              // the input tag has a value attribute preloaded that points to a preselected movie's id
+              // the input tag has a value attribute preloaded that points to a preselected repository's id
               // this function resolves that id attribute to an object that select2 can render
-              // using its formatResult renderer - that way the movie name is shown preselected
-              var id=$(element).val();
-              if (id!=="") {
-                  $.ajax("http://api.rottentomatoes.com/api/public/v1.0/movies/"+id+".json", {
-                      data: {
-                          apikey: "w2uyd7u9mj53nhq2f8mpzquq"
-                      },
-                      dataType: "jsonp"
+              // using its formatResult renderer - that way the repository name is shown preselected
+              var id = $(element).val();
+              if (id !== "") {
+                  $.ajax("https://api.github.com/repositories/" + id, {
+                      dataType: "json"
                   }).done(function(data) { callback(data); });
               }
           },
-          formatResult: movieFormatResult, // omitted for brevity, see the source of this page
-          formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+          formatResult: repoFormatResult, // omitted for brevity, see the source of this page
+          formatSelection: repoFormatSelection,  // omitted for brevity, see the source of this page
           dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
           escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
       });
-
-      function movieFormatResult(movie) {
-          var markup = "<table class='movie-result'><tr>";
-          if (movie.posters !== undefined && movie.posters.thumbnail !== undefined) {
-              markup += "<td class='movie-image'><img src='" + movie.posters.thumbnail + "'/></td>";
-          }
-          markup += "<td class='movie-info'><div class='movie-title'>" + movie.title + "</div>";
-          if (movie.critics_consensus !== undefined) {
-              markup += "<div class='movie-synopsis'>" + movie.critics_consensus + "</div>";
-          }
-          else if (movie.synopsis !== undefined) {
-              markup += "<div class='movie-synopsis'>" + movie.synopsis + "</div>";
-          }
-          markup += "</td></tr></table>"
-          return markup;
-      }
-
-      function movieFormatSelection(movie) {
-          return movie.title;
-      }
 
       $('button[data-select2-open]').click(function(){
         $('#' + $(this).data('select2-open')).select2('open');

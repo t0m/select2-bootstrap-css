@@ -74,7 +74,7 @@ Index: select2-bootstrap.css
 -
  .select2-container.input-lg .select2-choice,
  .input-group-lg .select2-container .select2-choice {
-   height: 45px;
+   height: 46px;
    line-height: 1.33;
    border-radius: 6px;
  }
@@ -90,7 +90,7 @@ Index: select2-bootstrap.css
 -
  .select2-container-multi.input-lg .select2-choices .select2-search-field input,
  .input-group-lg .select2-container-multi .select2-choices .select2-search-field input {
-   height: 43px;
+   height: 44px;
  }
 -
  /**
@@ -209,36 +209,36 @@ Index: select2-bootstrap.css
 @@ -234,9 +209,8 @@
  }
  .has-warning.select2-drop-active.select2-drop.select2-drop-above {
-   border-top-color: #a47e3c;
+   border-top-color: #66512c;
  }
 -
  .has-error .select2-choice,
  .has-error .select2-choices {
-   border-color: #b94a48;
+   border-color: #a94442;
  }
 @@ -251,9 +225,8 @@
  }
  .has-error.select2-drop-active.select2-drop.select2-drop-above {
-   border-top-color: #953b39;
+   border-top-color: #843534;
  }
 -
  .has-success .select2-choice,
  .has-success .select2-choices {
-   border-color: #468847;
+   border-color: #3c763d;
  }
 @@ -268,9 +241,8 @@
  }
  .has-success.select2-drop-active.select2-drop.select2-drop-above {
-   border-top-color: #356635;
+   border-top-color: #2b542c;
  }
 -
  /**
   * Make Select2's active-styles - applied to .select2-container when the widget receives focus -
   * fit Bootstrap 3's .form-element:focus appearance.
   */
-@@ -282,18 +254,15 @@
-   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+@@ -283,18 +255,15 @@
    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
  }
 -
@@ -255,7 +255,7 @@ Index: select2-bootstrap.css
   * Select2 widgets in Bootstrap Input Groups
   *
   * When Select2 widgets are combined with other elements using Bootstrap 3's
-@@ -314,83 +283,73 @@
+@@ -315,83 +284,73 @@
  .input-group.select2-bootstrap-prepend [class^="select2-choice"] {
    border-bottom-left-radius: 0 !important;
    border-top-left-radius: 0 !important;
@@ -343,17 +343,17 @@ Index: select2-bootstrap.css
   * Adjust "no results" and "selection limit" messages to make use
   * of Bootstrap 3's default "Alert" style.
   *
-@@ -401,9 +360,8 @@
+@@ -402,9 +361,8 @@
  .select2-results .select2-selection-limit {
    background-color: #fcf8e3;
-   color: #c09853;
+   color: #8a6d3b;
  }
 -
  /**
   * Address disabled Select2 styles.
   *
   * 1. For Select2 v.3.3.2.
-@@ -416,16 +374,16 @@
+@@ -417,16 +375,16 @@
    background-color: #eeeeee;
    border-color: #cccccc;
  }
@@ -372,7 +372,7 @@ Index: select2-bootstrap.css
   * Address Select2's loading indicator position - which should not stick
   * to the right edge of Select2's search input.
   *
-@@ -450,7 +408,9 @@
+@@ -451,7 +409,9 @@
  .select2-container-multi .select2-choices .select2-search-field input.select2-active,
  .select2-more-results.select2-active {
    background-position: 99%;

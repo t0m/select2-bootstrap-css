@@ -35,6 +35,44 @@ module.exports = function(grunt) {
         files: ['package.json', 'bower.json', 'lib/select2-bootstrap/version.rb'],
         push: false
       }
+    },
+
+    copy: {
+      main: {
+        files: [
+          { src: ['components/bootstrap/dist/css/bootstrap.min.css'], dest: '_jekyll/css/bootstrap.min.css', expand: false },
+          { src: ['components/respond/dest/respond.min.js'], dest: '_jekyll/js/respond.min.js', expand: false },
+          { cwd: 'components/bootstrap/dist/fonts', src: ['**/*'], dest: '_jekyll/fonts', expand: true }
+        ]
+      }
+    },
+
+    jekyll: {
+      options: {
+        bundleExec: true,
+        src : '_jekyll',
+        dest: 'docs'
+      },
+      build: {
+        options: {
+          serve: false
+        }
+      },
+      serve: {
+        options: {
+          watch: true,
+          serve: true
+        }
+      }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'docs',
+        message: 'Updated gh-pages.',
+        push: false
+      },
+      src: ['**/*']
     }
 
   });

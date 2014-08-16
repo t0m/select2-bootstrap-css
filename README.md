@@ -4,7 +4,8 @@ forked for Bootstrap 3.
 Demonstrations available at  
 http://fk.github.io/select2-bootstrap-css/
 
-Tested with Bootstrap v3.2.0 and Select2 v3.3.2, v3.4.1-v3.4.5, master in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
+Tested with Bootstrap v3.2.0 and Select2 v3.3.2, v3.4.1-v3.4.5, master  
+in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Known issues
 

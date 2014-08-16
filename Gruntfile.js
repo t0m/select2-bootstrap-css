@@ -69,8 +69,7 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'docs',
-        message: 'Updated gh-pages.',
-        push: false
+        message: 'Update gh-pages.'
       },
       src: ['**/*']
     }

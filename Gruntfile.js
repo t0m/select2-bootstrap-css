@@ -33,7 +33,8 @@ module.exports = function(grunt) {
     bump: {
       options: {
         files: ['package.json', 'bower.json', 'lib/select2-bootstrap/version.rb'],
-        push: false
+        push: false,
+        createTag: false
       }
     },
 

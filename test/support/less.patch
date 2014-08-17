@@ -377,7 +377,7 @@ Index: select2-bootstrap.css
   * Address Select2's loading indicator position - which should not stick
   * to the right edge of Select2's search input.
   *
-@@ -474,7 +432,9 @@
+@@ -474,19 +432,20 @@
  .select2-container-multi .select2-choices .select2-search-field input.select2-active,
  .select2-more-results.select2-active {
    background-position: 99%;
@@ -387,3 +387,17 @@ Index: select2-bootstrap.css
    /* 5 */
 +
  }
+-
+ /**
+  * To support Select2 pre v3.4.2 in combination with Bootstrap v3.2.0,
+  * ensure that .select2-offscreen width, height and position can not be overwritten.
+  *
++ * This adresses changes in Bootstrap somewhere after the initial v3.0.0 which –
+- * This adresses changes in Bootstrap somewhere after the initial v3.0.0 which -
+  * in combination with Select2's pre-v3.4.2 CSS missing the "!important" after
++ * the following rules – allow Bootstrap to overwrite the latter, which results in
+- * the following rules - allow Bootstrap to overwrite the latter, which results in
+  * the original <select> element Select2 is replacing not be properly being hidden
+  * when used in a "Bootstrap Input Group with Addon".
+  **/
+ .select2-offscreen,

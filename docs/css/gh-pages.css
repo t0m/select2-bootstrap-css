@@ -69,6 +69,9 @@ a:hover, a:focus {
     color: black;
     transition: all 0.1s ease-in-out;
     border-bottom: 1px solid transparent; }
+    .jumbotron-links a:hover {
+      border-color: black;
+      border-width: 2px; }
   .jumbotron-links li {
     display: inline;
     margin-left: 10px;

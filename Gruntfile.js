@@ -73,6 +73,14 @@ module.exports = function(grunt) {
         message: 'Update gh-pages.'
       },
       src: ['**/*']
+    },
+
+    watch: {
+      files: 'lib/select2-bootstrap.scss',
+      tasks: ['sass'],
+      options: {
+        livereload: true
+      }
     }
 
   });

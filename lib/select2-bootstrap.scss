@@ -313,6 +313,25 @@
 
 .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   @include border-top-radius(0 !important);
+  @include border-bottom-radius($input-border-radius !important);
+  .input-group.select2-bootstrap-prepend & {
+    @include border-left-radius(0 !important);
+  }
+  .input-group.select2-bootstrap-append & {
+    @include border-right-radius(0 !important);
+  }
+  .input-group.input-group-sm.select2-bootstrap-prepend & {
+    border-bottom-right-radius: $border-radius-small !important;  
+  }
+  .input-group.input-group-lg.select2-bootstrap-prepend & {
+    border-bottom-right-radius: $border-radius-large !important;  
+  }
+  .input-group.input-group-sm.select2-bootstrap-append & {
+    border-bottom-left-radius: $border-radius-small !important;  
+  }
+  .input-group.input-group-lg.select2-bootstrap-append & {
+    border-bottom-left-radius: $border-radius-large !important;  
+  }
 }
 
 /**

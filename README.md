@@ -16,7 +16,7 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Changelog
 
-###### Not yet released
+###### v1.4.1
 
  * Fixed border-radii for `.select2-dropdown-open.select2-drop-above` (as reported by @rzschech in https://github.com/t0m/select2-bootstrap-css/issues/24#issuecomment-37683695, https://github.com/t0m/select2-bootstrap-css/issues/24#issuecomment-37688176) and `.select2-dropdown in "Bootstrap input groups with addons".
  * Fixed an issue where using Select2 pre v3.4.2 in combination with Bootstrap v3.2.0 and when using Select2 in a "Bootstrap Input Group with Addons" context would result in the original `<select>` element not being hidden.

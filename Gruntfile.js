@@ -42,6 +42,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           { src: ['components/bootstrap/dist/css/bootstrap.min.css'], dest: '_jekyll/css/bootstrap.min.css', expand: false },
+          { src: ['components/bootstrap/dist/js/bootstrap.min.js'], dest: '_jekyll/js/bootstrap.min.js', expand: false },
           { src: ['components/respond/dest/respond.min.js'], dest: '_jekyll/js/respond.min.js', expand: false },
           { cwd: 'components/bootstrap/dist/fonts', src: ['**/*'], dest: '_jekyll/fonts', expand: true }
         ]
@@ -73,6 +74,14 @@ module.exports = function(grunt) {
         message: 'Update gh-pages.'
       },
       src: ['**/*']
+    },
+
+    watch: {
+      files: 'lib/select2-bootstrap.scss',
+      tasks: ['sass'],
+      options: {
+        livereload: true
+      }
     }
 
   });

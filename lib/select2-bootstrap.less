@@ -313,6 +313,25 @@
 
 .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   .border-top-radius(0) !important;
+  .border-bottom-radius(@input-border-radius) !important;
+  .input-group.select2-bootstrap-prepend & {
+    .border-left-radius(0) !important;
+  }
+  .input-group.select2-bootstrap-append & {
+    .border-right-radius(0) !important;
+  }
+  .input-group.input-group-sm.select2-bootstrap-prepend & {
+    border-bottom-right-radius: @border-radius-small !important;  
+  }
+  .input-group.input-group-lg.select2-bootstrap-prepend & {
+    border-bottom-right-radius: @border-radius-large !important;  
+  }
+  .input-group.input-group-sm.select2-bootstrap-append & {
+    border-bottom-left-radius: @border-radius-small !important;  
+  }
+  .input-group.input-group-lg.select2-bootstrap-append & {
+    border-bottom-left-radius: @border-radius-large !important;  
+  }
 }
 
 /**
@@ -442,4 +461,22 @@
 .select2-more-results.select2-active /* 3 */ {
   background-position: 99%; /* 4 */
   background-position: right 4px center; /* 5 */
+}
+
+/**
+ * To support Select2 pre v3.4.2 in combination with Bootstrap v3.2.0,
+ * ensure that .select2-offscreen width, height and position can not be overwritten.
+ *
+ * This adresses changes in Bootstrap somewhere after the initial v3.0.0 which –
+ * in combination with Select2's pre-v3.4.2 CSS missing the "!important" after
+ * the following rules – allow Bootstrap to overwrite the latter, which results in
+ * the original <select> element Select2 is replacing not be properly being hidden
+ * when used in a "Bootstrap Input Group with Addon".
+ **/
+
+.select2-offscreen,
+.select2-offscreen:focus {
+  width: 1px !important;
+  height: 1px !important;
+  position: absolute !important;
 }

@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="page-header">
-			<h3>Input Groups <small><a href="http://getbootstrap.com/components/#input-groups">#</a></small></h3>
+			<h3>Input Groups <small><a href="http://getbootstrap.com/components/#input-groups" ><span class="glyphicon glyphicon-link"></span></a></small></h3>
 		</div>
 
 		<p>To let the Select2-widget know if any elements are directly being appended, prepended or both in the context of a Bootstrap input group, add <code>.select2-bootstrap-prepend</code> and/or <code>.select2-bootstrap-append</code> to the <code>.input-group</code> wrapper element to address the corresponding border-radii.</p>
@@ -124,7 +124,7 @@
 
 			<div class="page-header">
 				<h3>
-					Control sizing <small><a href="http://getbootstrap.com/css/#forms-control-sizes">#</a></small>
+					Control sizing <small><a href="http://getbootstrap.com/css/#forms-control-sizes"><span class="glyphicon glyphicon-link"></span></a></small>
 				</h3>
 			</div>
 
@@ -234,7 +234,7 @@
 
 			<div class="page-header">
 				<h3>
-					Button Addons <small><a href="http://getbootstrap.com/components/#input-groups-buttons">#</a></small>
+					Button Addons <small><a href="http://getbootstrap.com/components/#input-groups-buttons"><span class="glyphicon glyphicon-link"></span></a></small>
 				</h3>
 			</div>
 
@@ -331,7 +331,7 @@
 			</div>
 
 			<div class="page-header">
-				<h3>Disabled inputs <small><a href="http://getbootstrap.com/css/#forms-control-states">#</a></small></h3>
+				<h3>Disabled inputs <small><a href="http://getbootstrap.com/css/#forms-control-states"><span class="glyphicon glyphicon-link"></span></a></small></h3>
 			</div>
 
 			<div class="row">
@@ -340,9 +340,9 @@
 						<label for="select2-disabled-inputs-single" class="control-label">col-md-3</label>
 						<div class="input-group select2-bootstrap-prepend">
 							<span class="input-group-addon">
-								<input type="checkbox" checked>
+								<input type="checkbox">
 							</span>
-							<select id="select2-disabled-inputs-single" class="form-control select2">
+							<select id="select2-disabled-inputs-single" class="form-control select2" disabled>
 								<option></option>
 								{% include select2-select.html %}
 							</select>
@@ -383,17 +383,18 @@
 				var markup = "<div class='select2-result-repository clearfix'>" +
 					"<div class='select2-result-repository__avatar'><img src='" + repo.owner.avatar_url + "' /></div>" +
 					"<div class='select2-result-repository__meta'>" +
-						"<div class='select2-result-repository__title'>" + repo.full_name + "</div>" +
-						"<div class='select2-result-repository__statistics'>" + 
-							"<div class='select2-result-repository__forks'>" + repo.forks_count + " Forks</div>" +
-							"<div class='select2-result-repository__stargazers'>" + repo.stargazers_count + " Stars</div>" +
-						"</div>";
+						"<div class='select2-result-repository__title'>" + repo.full_name + "</div>";
 
 				if ( repo.description ) {
-					 markup += "<div class='select2-result-repository__description'>" + repo.description + "</div>";
+					markup += "<div class='select2-result-repository__description'>" + repo.description + "</div>";
 				}
 
-				markup += "</div></div>";
+				markup += "<div class='select2-result-repository__statistics'>" + 
+							"<div class='select2-result-repository__forks'><span class='glyphicon glyphicon-flash'></span> " + repo.forks_count + " Forks</div>" +
+							"<div class='select2-result-repository__stargazers'><span class='glyphicon glyphicon-star'></span> " + repo.stargazers_count + " Stars</div>" +
+							"<div class='select2-result-repository__watchers'><span class='glyphicon glyphicon-eye-open'></span> " + repo.watchers_count + " Watchers</div>" +
+						"</div>" +
+					"</div></div>";
 
 				return markup;
 			}
@@ -403,47 +404,48 @@
 			}
 
 			$( ".select2-remote" ).select2({
-					placeholder: "Search for a GitHub Repository",
-					minimumInputLength: 1,
-					// instead of writing the function to execute the request we use Select2's convenient helper
-					ajax: {
-							url: "https://api.github.com/search/repositories",
-							dataType: "json",
-							quietMillis: 250,
-							data: function( term, page ) {
-									return {
-											// search term
-											q: term
-									};
-							},
-							results: function( data, page ) {
-									// parse the results into the format expected by Select2.
-									// since we are using custom formatting functions we do not need to alter the remote JSON data
-									return { results: data.items };
-							},
-							cache: true
+				placeholder: "Search for a GitHub Repository",
+				minimumInputLength: 1,
+				// instead of writing the function to execute the request we use Select2's convenient helper
+				ajax: {
+					url: "https://api.github.com/search/repositories",
+					dataType: "json",
+					quietMillis: 250,
+					data: function( term, page ) {
+						return {
+							// search term
+							q: term
+						};
 					},
-					initSelection: function( element, callback ) {
-							// the input tag has a value attribute preloaded that points to a preselected repository's id
-							// this function resolves that id attribute to an object that select2 can render
-							// using its formatResult renderer - that way the repository name is shown preselected
-							var id = $( element ).val();
-							if ( id !== "" ) {
-									$.ajax( "https://api.github.com/repositories/" + id, {
-										dataType: "json"
-									}).done( function( data ) {
-										callback( data );
-									});
-							}
+					results: function( data, page ) {
+							// parse the results into the format expected by Select2.
+							// since we are using custom formatting functions we do not need to alter the remote JSON data
+							return { results: data.items };
 					},
-					formatResult: repoFormatResult,
-					formatSelection: repoFormatSelection,
-					// apply css that makes the dropdown taller
-					dropdownCssClass: "bigdrop",
-					// we do not want to escape markup since we are displaying html in results
-					escapeMarkup: function( m ) {
-						return m;
+					cache: true
+				},
+				initSelection: function( element, callback ) {
+					// the input tag has a value attribute preloaded that points to a preselected repository's id
+					// this function resolves that id attribute to an object that select2 can render
+					// using its formatResult renderer - that way the repository name is shown preselected
+					var id = $( element ).val();
+
+					if ( id !== "" ) {
+						$.ajax( "https://api.github.com/repositories/" + id, {
+							dataType: "json"
+						}).done( function( data ) {
+							callback( data );
+						});
 					}
+				},
+				formatResult: repoFormatResult,
+				formatSelection: repoFormatSelection,
+				// apply css that makes the dropdown taller
+				dropdownCssClass: "bigdrop",
+				// we do not want to escape markup since we are displaying html in results
+				escapeMarkup: function( m ) {
+					return m;
+				}
 			});
 
 			$( "button[data-select2-open]" ).click( function() {
@@ -475,12 +477,11 @@
 					var classNames = $( this ).parents( "[class*='has-']" )[ 0 ].className.split( /\s+/ );
 
 					for ( var i = 0; i < classNames.length; ++i ) {
-							if ( classNames[ i ].match( "has-" ) ) {
-								$( "#select2-drop" ).addClass( classNames[ i ] );
-							}
+						if ( classNames[ i ].match( "has-" ) ) {
+							$( "#select2-drop" ).addClass( classNames[ i ] );
+						}
 					}
 				}
-
 			});
 
 		</script>

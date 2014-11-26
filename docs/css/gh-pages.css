@@ -35,7 +35,7 @@
   .select2-highlighted .select2-result-repository__title {
     color: white; }
   .select2-highlighted .select2-result-repository__forks, .select2-highlighted .select2-result-repository__stargazers, .select2-highlighted .select2-result-repository__description, .select2-highlighted .select2-result-repository__watchers {
-    color: #c6dcef; }
+    color: #c1d7e9; }
 
 a:hover, a:focus {
   text-decoration: none; }
@@ -71,13 +71,13 @@ a:hover, a:focus {
     font-size: 16px; }
     .jumbotron .lead a {
       border-bottom: 1px solid transparent;
-      color: #428bca;
+      color: #337ab7;
       font-weight: normal;
       transition: all 0.1s ease-in-out; }
       .jumbotron .lead a:hover {
-        border-color: #2a6496;
+        border-color: #23527c;
         border-width: 1px;
-        color: #2a6496; }
+        color: #23527c; }
   .jumbotron .form-group {
     background: none; }
   .jumbotron .select2-wrapper {
@@ -86,13 +86,13 @@ a:hover, a:focus {
     margin: 0 auto 16px;
     transition: all 0.1s ease-in-out; }
   .jumbotron .btn-outline {
-    border-color: #428bca;
+    border-color: #337ab7;
     font-size: inherit;
     padding: 18px 24px;
     transition: all 0.1s ease-in-out; }
     .jumbotron .btn-outline:hover, .jumbotron .btn-outline:active {
       color: white;
-      background-color: #428bca; }
+      background-color: #337ab7; }
   .jumbotron .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
@@ -119,13 +119,13 @@ a:hover, a:focus {
   color: #cccccc; }
   .footer a {
     border-bottom: 1px solid transparent;
-    color: #428bca;
+    color: #337ab7;
     font-weight: normal;
     transition: all 0.1s ease-in-out; }
     .footer a:hover {
-      border-color: #2a6496;
+      border-color: #23527c;
       border-width: 1px;
-      color: #2a6496; }
+      color: #23527c; }
 
 @media (min-width: 768px) {
   .jumbotron {

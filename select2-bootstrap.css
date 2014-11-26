@@ -161,7 +161,7 @@
  */
 .select2-container .select2-choice .select2-arrow,
 .select2-container .select2-choice div {
-  border-left: 1px solid #cccccc;
+  border-left: none;
   background: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }

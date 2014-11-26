@@ -334,6 +334,7 @@
   border-top-left-radius: 0 !important;
   border-bottom-right-radius: 4px !important;
   border-bottom-left-radius: 4px !important;
+  background: white;
 }
 .input-group.select2-bootstrap-prepend .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   border-bottom-left-radius: 0 !important;

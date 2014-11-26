@@ -241,7 +241,6 @@
     border-color: darken(@color, 10%);
     &.select2-drop.select2-drop-above {
       border-top-color: darken(@color, 10%);
-      background: @btn-default-bg;
     }
   }
 }
@@ -316,6 +315,7 @@
 .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   .border-top-radius(0) !important;
   .border-bottom-radius(@input-border-radius) !important;
+  background: @btn-default-bg;
   .input-group.select2-bootstrap-prepend & {
     .border-left-radius(0) !important;
   }

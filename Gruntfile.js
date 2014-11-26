@@ -41,30 +41,20 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { src: ['components/bootstrap/dist/css/bootstrap.min.css'], dest: '_jekyll/css/bootstrap.min.css', expand: false },
-          { src: ['components/bootstrap/dist/js/bootstrap.min.js'], dest: '_jekyll/js/bootstrap.min.js', expand: false },
-          { src: ['components/respond/dest/respond.min.js'], dest: '_jekyll/js/respond.min.js', expand: false },
-          { cwd: 'components/bootstrap/dist/fonts', src: ['**/*'], dest: '_jekyll/fonts', expand: true }
+          { src: ['bower_components/bootstrap/dist/css/bootstrap.min.css'], dest: '_jekyll/css/bootstrap.min.css', expand: false },
+          { src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: '_jekyll/js/bootstrap.min.js', expand: false },
+          { src: ['bower_components/respond/dest/respond.min.js'], dest: '_jekyll/js/respond.min.js', expand: false },
+          { cwd: 'bower_components/bootstrap/dist/fonts', src: ['**/*'], dest: '_jekyll/fonts', expand: true }
         ]
       }
     },
 
-    jekyll: {
-      options: {
-        bundleExec: true,
-        src : '_jekyll',
-        dest: 'docs'
+    shell: {
+      jekyllBuild: {
+        command: 'jekyll build -s _jekyll -d docs'
       },
-      build: {
-        options: {
-          serve: false
-        }
-      },
-      serve: {
-        options: {
-          watch: true,
-          serve: true
-        }
+      jekyllServe: {
+        command: 'jekyll serve -w -s _jekyll -d docs'
       }
     },
 

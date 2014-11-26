@@ -51,11 +51,11 @@ With [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubyg
 to install all necessary development dependencies.
 
  * `grunt copy` copies assets from `components` to `_jekyll` – use this in case a new version of Twitter Bootstrap or Select2 are out and need to be tested
- * `grunt jekyll:build` builds `docs`
- * `grunt jekyll:serve` builds `docs` and serves them via Jekyll's `--watch` flag on http://localhost:4000
+ * `grunt shell:jekyllBuild` builds `docs`
+ * `grunt shell:jekyllServe` builds `docs` and serves them via Jekyll's `--watch` flag on http://localhost:4000
  * `grunt watch` watches for changes in `lib/select2-bootstrap.scss` ([livereload](https://github.com/gruntjs/grunt-contrib-watch#optionslivereload) is enabled)
 
-Develop in `lib/select2-bootstrap.scss` test your changes using `grunt watch` and `grunt jekyll:serve`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
+Develop in `lib/select2-bootstrap.scss` test your changes using `grunt watch` and `grunt shell:jekyllServe`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
 
 ###### Contributors
 

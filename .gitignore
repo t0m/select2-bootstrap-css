@@ -1,5 +1,5 @@
 build
-components
+bower_components
 node_modules
 .sass-cache
 gh-pages

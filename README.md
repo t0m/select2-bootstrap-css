@@ -16,6 +16,13 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Changelog
 
+###### Not yet released
+
+ * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35)
+ * Removed border-left for ``.select2-arrow`` [#36](https://github.com/t0m/select2-bootstrap-css/issues/36)
+ * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
+ * Bower components now live in the default "bower_components" folder; ditched grunt-jekyll in favor of grunt-shell.
+
 ###### v1.4.1
 
  * Fixed border-radii for `.select2-dropdown-open.select2-drop-above` (as reported by @rzschech in https://github.com/t0m/select2-bootstrap-css/issues/24#issuecomment-37683695, https://github.com/t0m/select2-bootstrap-css/issues/24#issuecomment-37688176) and `.select2-dropdown in "Bootstrap input groups with addons".

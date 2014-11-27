@@ -19,8 +19,8 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 ###### v1.4.2
 
  * Removed box-shadow for `.select2-container.form-control` (inherited from Bootstrap's `.form-control`).
- * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35)
- * Removed border-left for `.select2-arrow` [#36](https://github.com/t0m/select2-bootstrap-css/issues/36)
+ * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35).
+ * Removed border-left for `.select2-arrow` ([#36](https://github.com/t0m/select2-bootstrap-css/issues/36)).
  * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
  * Bower components now live in the default "bower_components" folder; ditched grunt-jekyll in favor of grunt-shell.
  * Updated grunt plugins.

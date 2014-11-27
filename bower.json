@@ -1,6 +1,6 @@
 {
   "name": "select2-bootstrap-css",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": [
     "select2-bootstrap.css"
   ],
@@ -13,8 +13,8 @@
     "select2": "^3.3.2"
   },
   "devDependencies": {
-    "bootstrap": "~3.2.0",
-    "bootstrap-sass-official": "~3.2.0",
+    "bootstrap": "~3.3.0",
+    "bootstrap-sass-official": "~3.3.0",
     "respond": "~1.4.2"
   }
 }

@@ -4,7 +4,7 @@ forked for Bootstrap 3.
 Demonstrations available at  
 http://fk.github.io/select2-bootstrap-css/
 
-Tested with Bootstrap v3.2.0 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master  
+Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master  
 in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Known issues
@@ -15,6 +15,15 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
  * checkboxes and radio-buttons in "Bootstrap input groups" could be vertically aligned to the top (instead of center) if combined with a multi Select2 to address variable height of the Select2 container
 
 ##### Changelog
+
+###### v1.4.2
+
+ * Removed box-shadow for `.select2-container.form-control` (inherited from Bootstrap's `.form-control`).
+ * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35)
+ * Removed border-left for `.select2-arrow` [#36](https://github.com/t0m/select2-bootstrap-css/issues/36)
+ * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
+ * Bower components now live in the default "bower_components" folder; ditched grunt-jekyll in favor of grunt-shell.
+ * Updated grunt plugins.
 
 ###### v1.4.1
 
@@ -51,11 +60,11 @@ With [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubyg
 to install all necessary development dependencies.
 
  * `grunt copy` copies assets from `components` to `_jekyll` – use this in case a new version of Twitter Bootstrap or Select2 are out and need to be tested
- * `grunt jekyll:build` builds `docs`
- * `grunt jekyll:serve` builds `docs` and serves them via Jekyll's `--watch` flag on http://localhost:4000
+ * `grunt shell:jekyllBuild` builds `docs`
+ * `grunt shell:jekyllServe` builds `docs` and serves them via Jekyll's `--watch` flag on http://localhost:4000
  * `grunt watch` watches for changes in `lib/select2-bootstrap.scss` ([livereload](https://github.com/gruntjs/grunt-contrib-watch#optionslivereload) is enabled)
 
-Develop in `lib/select2-bootstrap.scss` test your changes using `grunt watch` and `grunt jekyll:serve`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
+Develop in `lib/select2-bootstrap.scss` test your changes using `grunt watch` and `grunt shell:jekyllServe`. Ideally, port your changes to `lib/select2-bootstrap.less` and make sure tests are passing to verify that Less and Sass compile down to the target CSS via `npm test`.
 
 ###### Contributors
 

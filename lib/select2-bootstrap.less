@@ -1,6 +1,6 @@
 /**
- * Select2 Bootstrap 3 CSS v1.4.1
- * Tested with Bootstrap v3.2.0 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master
+ * Select2 Bootstrap 3 CSS v1.4.2
+ * Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master
  * in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE11
  * MIT License
  */
@@ -18,6 +18,7 @@
 .select2-container.form-control {
   background: transparent;
   border: none;
+  box-shadow: none;
   display: block; /* 1 */
   margin: 0;
   padding: 0;
@@ -163,7 +164,7 @@
 
 .select2-container .select2-choice .select2-arrow,
 .select2-container .select2-choice div /* 1 */ {
-  border-left: 1px solid @input-border;
+  border-left: none;
   background: none;
   .reset-filter;
 }
@@ -314,6 +315,7 @@
 .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   .border-top-radius(0) !important;
   .border-bottom-radius(@input-border-radius) !important;
+  background: @btn-default-bg;
   .input-group.select2-bootstrap-prepend & {
     .border-left-radius(0) !important;
   }

@@ -1,6 +1,6 @@
 /**
- * Select2 Bootstrap 3 CSS v1.4.2
- * Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master
+ * Select2 Bootstrap 3 CSS v1.4.3
+ * Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master
  * in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE11
  * MIT License
  */
@@ -335,6 +335,7 @@
   border-bottom-right-radius: 4px !important;
   border-bottom-left-radius: 4px !important;
   background: white;
+  filter: none;
 }
 .input-group.select2-bootstrap-prepend .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
   border-bottom-left-radius: 0 !important;

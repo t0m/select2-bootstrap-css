@@ -283,11 +283,11 @@ Index: select2-bootstrap.css
    border-bottom-left-radius: 4px !important;
 +  background: #ffffff;
 -  background: white;
+   filter: none;
  }
  .input-group.select2-bootstrap-prepend .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
    border-bottom-left-radius: 0 !important;
-   border-top-left-radius: 0 !important;
-@@ -355,68 +321,61 @@
+@@ -356,68 +322,61 @@
  }
  .input-group.input-group-lg.select2-bootstrap-append .select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
    border-bottom-left-radius: 6px !important;
@@ -360,7 +360,7 @@ Index: select2-bootstrap.css
   * Adjust "no results" and "selection limit" messages to make use
   * of Bootstrap 3's default "Alert" style.
   *
-@@ -427,9 +386,8 @@
+@@ -428,9 +387,8 @@
  .select2-results .select2-selection-limit {
    background-color: #fcf8e3;
    color: #8a6d3b;
@@ -370,7 +370,7 @@ Index: select2-bootstrap.css
   * Address disabled Select2 styles.
   *
   * 1. For Select2 v.3.3.2.
-@@ -442,16 +400,16 @@
+@@ -443,16 +401,16 @@
    background-color: #eeeeee;
    border-color: #cccccc;
  }
@@ -389,7 +389,7 @@ Index: select2-bootstrap.css
   * Address Select2's loading indicator position - which should not stick
   * to the right edge of Select2's search input.
   *
-@@ -476,19 +434,20 @@
+@@ -477,19 +435,20 @@
  .select2-container-multi .select2-choices .select2-search-field input.select2-active,
  .select2-more-results.select2-active {
    background-position: 99%;

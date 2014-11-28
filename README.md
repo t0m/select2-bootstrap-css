@@ -4,23 +4,26 @@ forked for Bootstrap 3.
 Demonstrations available at  
 http://fk.github.io/select2-bootstrap-css/
 
-Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master  
+Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master  
 in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Known issues
 
- * IE9/IE10: Select2 in "Bootstrap input group with button addon" (no height modifier, i. e. `.input-sm`, `.input-lg`) is 1px off in height
  * box-shadow for .select2-search input do not fit Bootstrap's defaults
  * the Select2 dropdown could inherit look-and-feel from Bootstrap dropdowns and/or could honor Bootstrap height sizing classes
  * checkboxes and radio-buttons in "Bootstrap input groups" could be vertically aligned to the top (instead of center) if combined with a multi Select2 to address variable height of the Select2 container
 
 ##### Changelog
 
+###### v1.4.3
+
+ * Removed gradient for `.select2-dropdown-open.select2-drop-above [class^="select2-choice"]` in IE <= 9; really fixes [#35](https://github.com/t0m/select2-bootstrap-css/issues/35).
+
 ###### v1.4.2
 
  * Removed box-shadow for `.select2-container.form-control` (inherited from Bootstrap's `.form-control`).
- * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35)
- * Removed border-left for `.select2-arrow` [#36](https://github.com/t0m/select2-bootstrap-css/issues/36)
+ * Fixed [#35](https://github.com/t0m/select2-bootstrap-css/issues/35).
+ * Removed border-left for `.select2-arrow` ([#36](https://github.com/t0m/select2-bootstrap-css/issues/36)).
  * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
  * Bower components now live in the default "bower_components" folder; ditched grunt-jekyll in favor of grunt-shell.
  * Updated grunt plugins.

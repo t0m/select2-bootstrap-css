@@ -1,6 +1,6 @@
 /**
- * Select2 Bootstrap 3 CSS v1.4.2
- * Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, master
+ * Select2 Bootstrap 3 CSS v1.4.3
+ * Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master
  * in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE11
  * MIT License
  */
@@ -316,6 +316,7 @@
   @include border-top-radius(0 !important);
   @include border-bottom-radius($input-border-radius !important);
   background: $btn-default-bg;
+  filter: none;
   .input-group.select2-bootstrap-prepend & {
     @include border-left-radius(0 !important);
   }

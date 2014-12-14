@@ -15,6 +15,10 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Changelog
 
+###### v1.4.4
+
+ * Don't hardcode :focus box-shadow colour ([#58](https://github.com/t0m/select2-bootstrap-css/issues/58)).
+
 ###### v1.4.3
 
  * Removed gradient for `.select2-dropdown-open.select2-drop-above [class^="select2-choice"]` in IE <= 9; really fixes [#35](https://github.com/t0m/select2-bootstrap-css/issues/35).

@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  // load all grunt tasks
+  // Load all grunt tasks.
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // Project configuration.
@@ -14,8 +14,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'docs/css/select2-bootstrap.css': 'lib/build.scss',
           '_jekyll/css/select2-bootstrap.css': 'lib/build.scss',
+          'docs/css/select2-bootstrap.css': 'lib/build.scss',
           'select2-bootstrap.css': 'lib/build.scss'
         }
       },
@@ -73,7 +73,9 @@ module.exports = function(grunt) {
         livereload: true
       }
     }
-
   });
 
+  // Default tasks.
+  grunt.registerTask('build', ['sass', 'copy', 'shell:jekyllBuild']);
+  grunt.registerTask('serve', ['shell:jekyllServe']);
 };

@@ -26,6 +26,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      target: {
+        files: {
+          'select2-bootstrap.min.css': 'select2-bootstrap.css'
+        }
+      }
+    },
+
     jshint: {
       all: ['Gruntfile.js', '*.json']
     },
@@ -76,6 +84,6 @@ module.exports = function(grunt) {
   });
 
   // Default tasks.
-  grunt.registerTask('build', ['sass', 'copy', 'shell:jekyllBuild']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'copy', 'shell:jekyllBuild']);
   grunt.registerTask('serve', ['shell:jekyllServe']);
 };

@@ -82,7 +82,7 @@
 .select2-container.input-lg .select2-choice,
 .input-group-lg .select2-container .select2-choice {
   height: 46px;
-  line-height: 1.33;
+  line-height: 1.33333;
   border-radius: 6px;
 }
 

@@ -20,6 +20,10 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Changelog
 
+###### v1.4.6
+
+ * Fix wrong version number in distribution sources.
+
 ###### v1.4.5
 
  * Built on Bootstrap 3 v3.3.2 and corresponding bootstrap-sass.

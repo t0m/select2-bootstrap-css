@@ -22,7 +22,7 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ###### v1.4.5
 
- * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
+ * Built on Bootstrap 3 v3.3.2 and corresponding bootstrap-sass.
 
 ###### v1.4.4
 

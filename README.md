@@ -4,7 +4,7 @@ forked for Bootstrap 3.
 Demonstrations available at  
 http://fk.github.io/select2-bootstrap-css/
 
-Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master  
+Tested with Bootstrap v3.3.2 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master  
 in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
 ##### Install
@@ -19,6 +19,10 @@ in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
  * checkboxes and radio-buttons in "Bootstrap input groups" could be vertically aligned to the top (instead of center) if combined with a multi Select2 to address variable height of the Select2 container
 
 ##### Changelog
+
+###### v1.4.5
+
+ * Built on Bootstrap 3 v3.3.1 and corresponding bootstrap-sass.
 
 ###### v1.4.4
 

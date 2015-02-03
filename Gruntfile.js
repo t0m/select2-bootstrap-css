@@ -40,7 +40,11 @@ module.exports = function(grunt) {
 
     bump: {
       options: {
-        files: ['package.json', 'bower.json', 'lib/select2-bootstrap/version.rb'],
+        files: [
+          'package.json',
+          'bower.json',
+          'lib/select2-bootstrap/version.rb'
+        ],
         push: false,
         createTag: false
       }
@@ -49,10 +53,27 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { src: ['bower_components/bootstrap/dist/css/bootstrap.min.css'], dest: '_jekyll/css/bootstrap.min.css', expand: false },
-          { src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: '_jekyll/js/bootstrap.min.js', expand: false },
-          { src: ['bower_components/respond/dest/respond.min.js'], dest: '_jekyll/js/respond.min.js', expand: false },
-          { cwd: 'bower_components/bootstrap/dist/fonts', src: ['**/*'], dest: '_jekyll/fonts', expand: true }
+          {
+            src: 'bower_components/bootstrap/dist/css/bootstrap.min.css',
+            dest: '_jekyll/css/bootstrap.min.css',
+            expand: false
+          },
+          {
+            src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
+            dest: '_jekyll/js/bootstrap.min.js',
+            expand: false
+          },
+          {
+            src: 'bower_components/respond/dest/respond.min.js',
+            dest: '_jekyll/js/respond.min.js',
+            expand: false
+          },
+          {
+            cwd: 'bower_components/bootstrap/dist/fonts',
+            src: ['**/*'],
+            dest: '_jekyll/fonts',
+            expand: true
+          }
         ]
       }
     },

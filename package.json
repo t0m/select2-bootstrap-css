@@ -1,8 +1,10 @@
 {
   "name": "select2-bootstrap-css",
-  "version": "1.4.4",
-  "description": "simple css to make select2 widgets fit in with bootstrap",
+  "version": "1.4.5",
+  "description": "Simple CSS to make Select2 widgets fit in with Bootstrap",
   "main": "",
+  "style": "select2-bootstrap.css",
+  "homepage": "https://github.com/t0m/select2-bootstrap-css",
   "directories": {
     "doc": "docs"
   },
@@ -15,19 +17,27 @@
   },
   "keywords": [
     "bootstrap",
-    "select2"
+    "select2",
+    "css"
   ],
-  "author": "Michael Hellein",
-  "license": "MIT",
+  "author": "Tom Terrace",
+  "contributors": [
+    { "name": "Michael Hellein" },
+    { "name": "Florian Kissling" }
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/t0m/select2-bootstrap-css/blob/master/LICENSE"
+  },
   "readmeFilename": "README.md",
   "devDependencies": {
     "bower": "~1.3.12",
     "diff": "~1.0.4",
-    "grunt": "~0.4.1",
-    "grunt-bump": "0.0.11",
+    "grunt": "~0.4.5",
+    "grunt-bump": "0.1.0",
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-cssmin": "^0.11.0",
-    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-jshint": "~0.11.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-sass": "~0.8.1",
     "grunt-contrib-watch": "^0.6.1",

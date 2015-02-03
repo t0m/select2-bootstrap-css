@@ -7,6 +7,11 @@ http://fk.github.io/select2-bootstrap-css/
 Tested with Bootstrap v3.3.1 and Select2 v3.3.2, v3.4.1-v3.4.5, v3.5.1, v3.5.2, master  
 in latest Chrome, Safari, Firefox, Opera (Mac) and IE8-IE10.
 
+##### Install
+
+ * [Bower](http://bower.io/): `bower install select2-bootstrap-css`
+ * [npm](http://npmjs.org/): `npm install select2-bootstrap-css`
+
 ##### Known issues
 
  * box-shadow for .select2-search input do not fit Bootstrap's defaults

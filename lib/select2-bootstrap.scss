@@ -22,12 +22,12 @@
 
 .select2-container .select2-choice,
 .select2-container-multi .select2-choices {
-  height: $baseLineHeight + 8px;
-  line-height: $baseLineHeight + 9px;
-  border: 1px solid $inputBorder;
-  @include border-radius($inputBorderRadius);
+  height: $line-height-base + 8px;
+  line-height: $line-height-base + 9px;
+  border: 1px solid $input-border;
+  @include border-radius($input-border-radius);
   background: none;
-  background-color: $inputBackground;
+  background-color: $input-bg;
   filter: none;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
 }
@@ -42,7 +42,7 @@
 }
 
 .control-group.error [class^="select2-choice"] {
-  border-color: $errorText;
+  border-color: $btn-danger-border;
 }
 
 .select2-container-multi .select2-choices .select2-search-field {
@@ -60,7 +60,7 @@
 }
 
 [class^="input-"] .select2-container {
-  font-size: $baseFontSize;
+  font-size: $font-size-base;
 }
 
 .input-prepend [class^="select2-choice"] {

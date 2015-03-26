@@ -6,8 +6,9 @@
   ],
   "ignore": [
     "**/.*",
-    "node_modules",
-    "components"
+    "_jekyll",
+    "docs",
+    "test"
   ],
   "dependencies": {
     "select2": "^3.3.2"

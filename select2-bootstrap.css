@@ -1,5 +1,5 @@
 /**
- * Select2 Bootstrap CSS v1.2.4
+ * Select2 Bootstrap CSS v1.2.5
  * Tested with Bootstrap v2.3.1, v2.3.2 and Select2 v3.3.2, v3.4.1
  * MIT License
  */
@@ -71,6 +71,10 @@
   border-color: rgba(82, 168, 236, 0.8);
   border-color: #ccc\0;
   outline: none;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-multi.select2-container-active .select2-choices {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);

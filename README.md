@@ -1,6 +1,8 @@
 # Select2 Bootstrap CSS
 
-This is a bare bones stylesheet for making select2 fit in with bootstrap a bit better.
+Simple CSS to make Select2 widgets fit in with Bootstrap.  
+*This branch (`master`) contains the legacy version for Bootstrap 2.  
+If you are looking for the Bootstrap 3 version, please head over to the [`bootstrap3` branch](https://github.com/t0m/select2-bootstrap-css/tree/bootstrap3).*
 
 The LESS file is located at lib/select2-bootstrap.less, and the SCSS file is located at lib/select2-bootstrap.scss.
 

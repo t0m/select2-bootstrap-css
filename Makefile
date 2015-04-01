@@ -16,4 +16,5 @@ pages_setup:
 	mkdir gh-pages
 	git init gh-pages
 	cd gh-pages; git remote add origin git@github.com:t0m/select2-bootstrap-css.git
+	cd gh-pages; git fetch
 	cd gh-pages; git checkout gh-pages

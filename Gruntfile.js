@@ -7,13 +7,15 @@ module.exports = function(grunt) {
     nodeunit: {
       all: ['test/*_test.js']
     },
-    
+
     sass: {
       options: {
-        style: 'expanded'
+        style: 'expanded',
+        sourcemap: 'none'
       },
       dist: {
         files: {
+          '_jekyll/select2-bootstrap.css': 'lib/build.scss',
           'docs/select2-bootstrap.css': 'lib/build.scss',
           'select2-bootstrap.css': 'lib/build.scss'
         }

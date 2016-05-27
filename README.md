@@ -2,7 +2,7 @@
 
 Simple CSS to make Select2 widgets fit in with Bootstrap.  
 
-* NOTE: This is the original legacy repo. You probably want the official one here: https://github.com/select2/select2-bootstrap-theme
+* NOTE: This is the legacy repo. You probably want the official one here: https://github.com/select2/select2-bootstrap-theme
 
 --------------------------------------------------
 

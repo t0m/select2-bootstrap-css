@@ -2,7 +2,7 @@
   "name": "select2-bootstrap-css",
   "version": "1.2.5",
   "main": [
-    "select2-bootstrap.css"
+    "./select2-bootstrap.css"
   ],
   "ignore": [
     "**/.*",

@@ -25,7 +25,7 @@
   height: $baseLineHeight + 8px;
   line-height: $baseLineHeight + 9px;
   border: 1px solid $inputBorder;
-  @include border-radius($inputBorderRadius);
+  border-radius: $inputBorderRadius;
   background: none;
   background-color: $inputBackground;
   filter: none;
